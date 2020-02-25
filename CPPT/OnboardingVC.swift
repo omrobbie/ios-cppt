@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnboardingVC.swift
 //  CPPT
 //
 //  Created by omrobbie on 25/02/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OnboardingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
