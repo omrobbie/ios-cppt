@@ -26,6 +26,9 @@
                                 <state key="normal" title="Masuk">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="JR7-av-Nuk" kind="presentation" modalPresentationStyle="fullScreen" id="TOn-x4-uK9"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZo-Ee-cJc">
                                 <rect key="frame" x="20" y="323" width="374" height="250"/>
@@ -79,5 +82,80 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--LoginVC-->
+        <scene sceneID="sL8-yz-glD">
+            <objects>
+                <viewController id="JR7-av-Nuk" customClass="LoginVC" customModule="CPPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jav-1F-M6b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="a6P-hD-nGX">
+                                <rect key="frame" x="0.0" y="108" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZRU-9A-Fa3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="alamat email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Dk-zt-6g8">
+                                <rect key="frame" x="20" y="322" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0f5-3a-HCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="kata kunci" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LNB-O8-yG1">
+                                <rect key="frame" x="20" y="388" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fl1-UB-Nra"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKo-in-WMT" customClass="CustomUIButton" customModule="CPPT" customModuleProvider="target">
+                                <rect key="frame" x="147" y="462" width="120" height="50"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="JmP-i7-k4B"/>
+                                    <constraint firstAttribute="height" constant="50" id="MzR-5g-hIG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Masuk">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoginTapped:" destination="JR7-av-Nuk" eventType="touchUpInside" id="VDr-Gx-Hq7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LNB-O8-yG1" firstAttribute="leading" secondItem="b1B-AD-yd7" secondAttribute="leading" constant="20" id="3mA-GN-g2k"/>
+                            <constraint firstItem="AKo-in-WMT" firstAttribute="top" secondItem="LNB-O8-yG1" secondAttribute="bottom" constant="24" id="6a3-Mw-crV"/>
+                            <constraint firstItem="a6P-hD-nGX" firstAttribute="leading" secondItem="b1B-AD-yd7" secondAttribute="leading" id="ELi-1f-0oS"/>
+                            <constraint firstItem="4Dk-zt-6g8" firstAttribute="leading" secondItem="b1B-AD-yd7" secondAttribute="leading" constant="20" id="M1f-FF-Iup"/>
+                            <constraint firstItem="b1B-AD-yd7" firstAttribute="trailing" secondItem="LNB-O8-yG1" secondAttribute="trailing" constant="20" id="Mz3-TR-NlS"/>
+                            <constraint firstItem="b1B-AD-yd7" firstAttribute="trailing" secondItem="a6P-hD-nGX" secondAttribute="trailing" id="Q9f-7n-TVe"/>
+                            <constraint firstItem="a6P-hD-nGX" firstAttribute="top" secondItem="b1B-AD-yd7" secondAttribute="top" constant="64" id="R0g-EC-aw3"/>
+                            <constraint firstItem="LNB-O8-yG1" firstAttribute="top" secondItem="4Dk-zt-6g8" secondAttribute="bottom" constant="16" id="S1Q-HW-v4h"/>
+                            <constraint firstItem="4Dk-zt-6g8" firstAttribute="top" secondItem="a6P-hD-nGX" secondAttribute="bottom" constant="64" id="aQ9-hY-1xX"/>
+                            <constraint firstItem="AKo-in-WMT" firstAttribute="centerX" secondItem="Jav-1F-M6b" secondAttribute="centerX" id="kQ9-XY-Zmj"/>
+                            <constraint firstItem="b1B-AD-yd7" firstAttribute="trailing" secondItem="4Dk-zt-6g8" secondAttribute="trailing" constant="20" id="lSu-Ha-a3m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b1B-AD-yd7"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="AKo-in-WMT" id="mho-F9-1uJ"/>
+                        <outlet property="txtEmail" destination="4Dk-zt-6g8" id="l7w-GN-4Z0"/>
+                        <outlet property="txtPassword" destination="LNB-O8-yG1" id="ysd-wS-cEO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxa-Si-NDT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="138.61607142857142"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="login" width="512" height="512"/>
+    </resources>
 </document>
