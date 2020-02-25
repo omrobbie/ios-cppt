@@ -241,7 +241,7 @@
                                 <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="135" id="0NL-5f-s2K">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="135" id="0NL-5f-s2K" customClass="HistoryCell" customModule="CPPT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0NL-5f-s2K" id="b3v-V0-ksk">
@@ -422,6 +422,9 @@
                     <navigationItem key="navigationItem" title="Data Pasien" id="qjw-u5-a96">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Msu-oG-GTh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RRu-33-Its" id="dPz-o4-NKk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-ED-dOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
