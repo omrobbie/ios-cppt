@@ -656,7 +656,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEM-id-fk1">
                                                 <rect key="frame" x="20" y="988.5" width="374" height="200"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-EL-pcb">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-EL-pcb" customClass="SignaturePad" customModule="SignaturePad">
                                                         <rect key="frame" x="1" y="1" width="372" height="198"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     </view>
@@ -670,6 +670,32 @@
                                                     <constraint firstItem="Ahi-EL-pcb" firstAttribute="leading" secondItem="sEM-id-fk1" secondAttribute="leading" constant="1" id="zkV-yE-f3e"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ8-qH-oRb" customClass="CustomUIButton" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="362" y="951" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="32" id="DR7-Py-ssJ"/>
+                                                    <constraint firstAttribute="height" constant="32" id="ycb-wT-1vm"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="delete.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnSignatureClearTapped:" destination="ZOn-Os-SaO" eventType="touchUpInside" id="izy-x7-KKg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqK-RI-k84" customClass="CustomUIButton" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="322" y="951" width="32" height="32"/>
+                                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="8mD-29-KWN"/>
+                                                    <constraint firstAttribute="width" constant="32" id="d1C-Ce-foH"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="scribble" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnSignatureStartTapped:" destination="ZOn-Os-SaO" eventType="touchUpInside" id="jhY-gM-ExK"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -680,6 +706,7 @@
                                             <constraint firstItem="oVz-qc-fX7" firstAttribute="top" secondItem="leP-hT-e3e" secondAttribute="bottom" constant="20" id="5Eg-iS-YmB"/>
                                             <constraint firstItem="u7O-aO-hSg" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="5ot-l2-qDU"/>
                                             <constraint firstItem="4St-cK-vMT" firstAttribute="top" secondItem="HGC-rI-6Is" secondAttribute="bottom" constant="20" id="8Ey-Lg-gf5"/>
+                                            <constraint firstAttribute="trailing" secondItem="vJ8-qH-oRb" secondAttribute="trailing" constant="20" id="B5k-d6-LAB"/>
                                             <constraint firstItem="12K-e0-muT" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Bs8-nU-AUv"/>
                                             <constraint firstItem="wF4-ZJ-lOU" firstAttribute="top" secondItem="ZDh-Lw-yGK" secondAttribute="top" constant="20" id="CAT-cn-PC4"/>
                                             <constraint firstItem="wos-jN-fkp" firstAttribute="top" secondItem="0r9-Oy-WH7" secondAttribute="bottom" constant="20" id="EED-Rf-WOA"/>
@@ -689,15 +716,18 @@
                                             <constraint firstItem="0r9-Oy-WH7" firstAttribute="top" secondItem="oVz-qc-fX7" secondAttribute="bottom" constant="8" id="JXl-w5-SSb"/>
                                             <constraint firstItem="leP-hT-e3e" firstAttribute="top" secondItem="4St-cK-vMT" secondAttribute="bottom" constant="8" id="JjO-sd-2Kl"/>
                                             <constraint firstItem="NoW-jZ-8X5" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Kym-Cx-Wws"/>
+                                            <constraint firstItem="TqK-RI-k84" firstAttribute="centerY" secondItem="Rcw-TB-6I8" secondAttribute="centerY" id="O9h-Be-IfD"/>
                                             <constraint firstItem="wos-jN-fkp" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="ORR-d7-uwn"/>
                                             <constraint firstItem="HGC-rI-6Is" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Qt2-gj-NIH"/>
                                             <constraint firstAttribute="trailing" secondItem="HGC-rI-6Is" secondAttribute="trailing" constant="20" id="RHe-aW-Qe4"/>
                                             <constraint firstAttribute="trailing" secondItem="eVS-vg-fB6" secondAttribute="trailing" constant="20" id="SF4-GT-zbz"/>
                                             <constraint firstAttribute="trailing" secondItem="49l-5W-ngf" secondAttribute="trailing" constant="20" id="T3e-AF-Ujg"/>
+                                            <constraint firstItem="vJ8-qH-oRb" firstAttribute="leading" secondItem="TqK-RI-k84" secondAttribute="trailing" constant="8" id="XdU-Et-rn0"/>
                                             <constraint firstItem="wF4-ZJ-lOU" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Xfl-29-WkO"/>
                                             <constraint firstAttribute="trailing" secondItem="0r9-Oy-WH7" secondAttribute="trailing" constant="20" id="Ykw-RB-aVY"/>
                                             <constraint firstItem="sEM-id-fk1" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="bHN-jZ-5Ma"/>
                                             <constraint firstItem="u7O-aO-hSg" firstAttribute="top" secondItem="NoW-jZ-8X5" secondAttribute="bottom" constant="20" id="bli-zn-RbG"/>
+                                            <constraint firstItem="vJ8-qH-oRb" firstAttribute="centerY" secondItem="Rcw-TB-6I8" secondAttribute="centerY" id="cM3-Zl-oEJ"/>
                                             <constraint firstItem="Rcw-TB-6I8" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="eCt-G2-0Ya"/>
                                             <constraint firstItem="Rcw-TB-6I8" firstAttribute="top" secondItem="49l-5W-ngf" secondAttribute="bottom" constant="20" id="j6z-rP-UEh"/>
                                             <constraint firstItem="0r9-Oy-WH7" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="mjM-8H-we8"/>
@@ -739,7 +769,10 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1430"/>
                     <connections>
+                        <outlet property="btnSignatureStart" destination="TqK-RI-k84" id="4UR-cf-gDu"/>
                         <outlet property="constraintBottom" destination="04L-Cm-AqG" id="69u-5e-ItU"/>
+                        <outlet property="scrollView" destination="F07-Hb-aHi" id="l1g-9u-sMb"/>
+                        <outlet property="signaturePad" destination="Ahi-EL-pcb" id="9X7-x7-252"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1111,11 +1144,13 @@
     </scenes>
     <resources>
         <image name="barcode.viewfinder" catalog="system" width="64" height="56"/>
+        <image name="delete.left" catalog="system" width="64" height="52"/>
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="login" width="512" height="512"/>
         <image name="pin.fill" catalog="system" width="58" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="scribble" catalog="system" width="64" height="54"/>
         <image name="sex-male" width="24" height="24"/>
         <image name="signature" catalog="system" width="64" height="44"/>
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
