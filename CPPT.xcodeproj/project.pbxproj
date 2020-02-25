@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		FC2E2FCB240510A000563380 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCA240510A000563380 /* InputVC.swift */; };
 		FC2E2FCD2405149C00563380 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCC2405149C00563380 /* CustomUITextView.swift */; };
 		FC2E2FD024051FD200563380 /* KeyboardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCF24051FD200563380 /* KeyboardSize.swift */; };
+		FC2E2FD224052AB500563380 /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FD124052AB500563380 /* QRCodeScanner.swift */; };
+		FC2E2FD424052B3100563380 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FD324052B3000563380 /* QRCodeVC.swift */; };
 		FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392B2404BA93008A2B79 /* AppDelegate.swift */; };
 		FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392D2404BA93008A2B79 /* SceneDelegate.swift */; };
 		FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392F2404BA93008A2B79 /* OnboardingVC.swift */; };
@@ -38,6 +40,8 @@
 		FC2E2FCA240510A000563380 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		FC2E2FCC2405149C00563380 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
 		FC2E2FCF24051FD200563380 /* KeyboardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSize.swift; sourceTree = "<group>"; };
+		FC2E2FD124052AB500563380 /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
+		FC2E2FD324052B3000563380 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		FC7539282404BA93008A2B79 /* CPPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75392B2404BA93008A2B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC75392D2404BA93008A2B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2E2FCF24051FD200563380 /* KeyboardSize.swift */,
+				FC2E2FD124052AB500563380 /* QRCodeScanner.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				FC2E2FC42404FAB900563380 /* PatientDetailVC.swift */,
 				FC2E2FC8240507D800563380 /* HistoryVC.swift */,
 				FC2E2FCA240510A000563380 /* InputVC.swift */,
+				FC2E2FD324052B3000563380 /* QRCodeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,7 +156,6 @@
 				C54732E8FB83261CD129EC36 /* Pods-CPPT.debug.xcconfig */,
 				638AF3BFD29806DE3C78DF4C /* Pods-CPPT.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,8 +284,10 @@
 			files = (
 				FC2E2FC32404F4DF00563380 /* PatientCell.swift in Sources */,
 				FC2E2FC9240507D800563380 /* HistoryVC.swift in Sources */,
+				FC2E2FD424052B3100563380 /* QRCodeVC.swift in Sources */,
 				FC2E2FC52404FAB900563380 /* PatientDetailVC.swift in Sources */,
 				FCD00E152404D0DF001B47D8 /* CustomUIButton.swift in Sources */,
+				FC2E2FD224052AB500563380 /* QRCodeScanner.swift in Sources */,
 				FC2E2FC7240505EA00563380 /* HistoryCell.swift in Sources */,
 				FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */,
 				FC2E2FCB240510A000563380 /* InputVC.swift in Sources */,

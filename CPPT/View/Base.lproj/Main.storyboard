@@ -198,6 +198,9 @@
                                 <state key="normal" image="barcode.viewfinder" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnQRCodeScannerTapped:" destination="hq1-iO-Cmf" eventType="touchUpInside" id="85j-nS-Oqq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -223,6 +226,7 @@
                     <connections>
                         <outlet property="tableView" destination="66H-SE-MKF" id="mml-ml-fh2"/>
                         <segue destination="GGD-nf-PN5" kind="push" id="Ecn-ll-g1h"/>
+                        <segue destination="hPd-Zc-nsh" kind="presentation" id="A9Z-6R-1XS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUz-8e-HBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -778,6 +782,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2498.5507246376815" y="866.51785714285711"/>
+        </scene>
+        <!--CodeVC-->
+        <scene sceneID="N6a-Lj-Fql">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeVC" id="hPd-Zc-nsh" customClass="QRCodeVC" customModule="CPPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VD1-sP-FbO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3z6-uD-mwq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gJ7-BQ-dLV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0Y-xF-JEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="1604"/>
         </scene>
         <!--Riwayat Asuhan-->
         <scene sceneID="EKW-61-f4m">

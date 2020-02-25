@@ -17,6 +17,16 @@ class HomeVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+
+    func foundQRCode(code: String) {
+        print("QRCode Scanner Result: \(code)")
+    }
+
+    @IBAction func btnQRCodeScannerTapped(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeVC") as? QRCodeVC else {return}
+        vc.homeVC = self
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
