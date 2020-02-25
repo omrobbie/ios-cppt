@@ -82,6 +82,71 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
+        <!--CPPT-->
+        <scene sceneID="vBt-MC-Esl">
+            <objects>
+                <viewController id="hq1-iO-Cmf" customClass="HomeVC" customModule="CPPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="67f-Lg-A6T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="cari data pasien..." translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-Ks-i4p">
+                                <rect key="frame" x="0.0" y="88" width="374" height="48"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="66H-SE-MKF">
+                                <rect key="frame" x="0.0" y="136" width="414" height="726"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="82" id="eFz-bF-rMw">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eFz-bF-rMw" id="f9k-xv-ZYE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-81-BhK" customClass="CustomUIButton" customModule="CPPT" customModuleProvider="target">
+                                <rect key="frame" x="374" y="96" width="32" height="32"/>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="21J-jI-82G"/>
+                                    <constraint firstAttribute="width" constant="32" id="ibr-8W-Nnn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="barcode.viewfinder" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tzx-81-BhK" firstAttribute="top" secondItem="bMd-GU-FKC" secondAttribute="top" constant="8" id="9do-uu-AJU"/>
+                            <constraint firstItem="66H-SE-MKF" firstAttribute="bottom" secondItem="bMd-GU-FKC" secondAttribute="bottom" id="Mon-Zk-3ds"/>
+                            <constraint firstItem="66H-SE-MKF" firstAttribute="top" secondItem="IiJ-Ks-i4p" secondAttribute="bottom" symbolic="YES" id="SIh-cE-Quu"/>
+                            <constraint firstItem="IiJ-Ks-i4p" firstAttribute="leading" secondItem="bMd-GU-FKC" secondAttribute="leading" id="WVK-eF-GPc"/>
+                            <constraint firstItem="66H-SE-MKF" firstAttribute="leading" secondItem="bMd-GU-FKC" secondAttribute="leading" id="ake-Uf-rrs"/>
+                            <constraint firstItem="IiJ-Ks-i4p" firstAttribute="top" secondItem="bMd-GU-FKC" secondAttribute="top" id="kbc-aM-4dA"/>
+                            <constraint firstItem="66H-SE-MKF" firstAttribute="top" secondItem="tzx-81-BhK" secondAttribute="bottom" constant="8" id="kqG-Dr-l1J"/>
+                            <constraint firstItem="bMd-GU-FKC" firstAttribute="trailing" secondItem="tzx-81-BhK" secondAttribute="trailing" constant="8" id="ntW-3G-dHZ"/>
+                            <constraint firstItem="66H-SE-MKF" firstAttribute="trailing" secondItem="bMd-GU-FKC" secondAttribute="trailing" id="rK9-6H-51b"/>
+                            <constraint firstItem="tzx-81-BhK" firstAttribute="centerY" secondItem="IiJ-Ks-i4p" secondAttribute="centerY" id="xX8-it-PeX"/>
+                            <constraint firstItem="tzx-81-BhK" firstAttribute="leading" secondItem="IiJ-Ks-i4p" secondAttribute="trailing" id="xp7-YT-R6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bMd-GU-FKC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CPPT" id="NSK-Lr-RlS">
+                        <barButtonItem key="backBarButtonItem" title="Kembali" id="6ad-1M-ngB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="fLC-VB-tT3"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUz-8e-HBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.89855072463774" y="866.51785714285711"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="sL8-yz-glD">
             <objects>
@@ -154,8 +219,29 @@
             </objects>
             <point key="canvasLocation" x="902.89855072463774" y="138.61607142857142"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p0k-u1-AzQ">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="X3r-KD-Fns" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pdo-DT-qJp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SkK-yf-UUQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hq1-iO-Cmf" kind="relationship" relationship="rootViewController" id="N1g-pl-7ch"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c01-jP-YRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="867"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="barcode.viewfinder" catalog="system" width="64" height="56"/>
+        <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="login" width="512" height="512"/>
     </resources>
 </document>

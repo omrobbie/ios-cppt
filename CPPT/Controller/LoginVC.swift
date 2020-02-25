@@ -25,5 +25,8 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func btnLoginTapped(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
