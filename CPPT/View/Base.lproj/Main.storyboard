@@ -420,16 +420,39 @@
                         <viewLayoutGuide key="safeArea" id="6Ix-rR-5dW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Data Pasien" id="qjw-u5-a96">
-                        <barButtonItem key="rightBarButtonItem" title="Simpan" image="plus" catalog="system" id="Msu-oG-GTh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" image="plus" catalog="system" id="Msu-oG-GTh">
+                            <connections>
+                                <action selector="btnAddTapped:" destination="GGD-nf-PN5" id="po3-3g-FcI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RRu-33-Its" id="dPz-o4-NKk"/>
                         <segue destination="q1V-fQ-JA0" kind="push" id="a4O-b5-kEr"/>
+                        <segue destination="ZOn-Os-SaO" kind="push" id="ZQ8-zC-2nM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEE-ED-dOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1669.5652173913045" y="866.51785714285711"/>
+        </scene>
+        <!--Asuhan Keperawatan-->
+        <scene sceneID="YlA-Z4-ufP">
+            <objects>
+                <viewController storyboardIdentifier="InputVC" id="ZOn-Os-SaO" customClass="InputVC" customModule="CPPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tjs-fO-yJE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PBq-g7-scx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Asuhan Keperawatan" id="hGL-nx-ryr">
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="r1z-5O-M4a"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2500" y="867"/>
         </scene>
         <!--Riwayat Asuhan-->
         <scene sceneID="EKW-61-f4m">
@@ -700,7 +723,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ2-q1-yEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2446" y="867"/>
+            <point key="canvasLocation" x="1670" y="1638"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="sL8-yz-glD">

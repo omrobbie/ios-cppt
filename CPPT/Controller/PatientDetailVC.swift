@@ -17,6 +17,11 @@ class PatientDetailVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+
+    @IBAction func btnAddTapped(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "InputVC") as? InputVC else {return}
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
@@ -36,7 +41,6 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "HistoryVC") as? HistoryVC else {return}
-        vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
     }
 }
