@@ -33,4 +33,10 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "HistoryVC") as? HistoryVC else {return}
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
