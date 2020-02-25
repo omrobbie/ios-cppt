@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3126D7B292B61F7FCA379A81 /* Pods_CPPT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAE5FDEBDBA008CE0A469C2 /* Pods_CPPT.framework */; };
 		FC2E2FBF2404D67A00563380 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FBE2404D67A00563380 /* HomeVC.swift */; };
 		FC2E2FC32404F4DF00563380 /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC22404F4DF00563380 /* PatientCell.swift */; };
 		FC2E2FC52404FAB900563380 /* PatientDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC42404FAB900563380 /* PatientDetailVC.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		638AF3BFD29806DE3C78DF4C /* Pods-CPPT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPPT.release.xcconfig"; path = "Target Support Files/Pods-CPPT/Pods-CPPT.release.xcconfig"; sourceTree = "<group>"; };
+		6AAE5FDEBDBA008CE0A469C2 /* Pods_CPPT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CPPT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C54732E8FB83261CD129EC36 /* Pods-CPPT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CPPT.debug.xcconfig"; path = "Target Support Files/Pods-CPPT/Pods-CPPT.debug.xcconfig"; sourceTree = "<group>"; };
 		FC2E2FBE2404D67A00563380 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		FC2E2FC22404F4DF00563380 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
 		FC2E2FC42404FAB900563380 /* PatientDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientDetailVC.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3126D7B292B61F7FCA379A81 /* Pods_CPPT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +75,8 @@
 			children = (
 				FC75392A2404BA93008A2B79 /* CPPT */,
 				FC7539292404BA93008A2B79 /* Products */,
+				FD2D1CD8F55D79B8500D5B16 /* Pods */,
+				FE8107B016EA778312787FBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +144,24 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		FD2D1CD8F55D79B8500D5B16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C54732E8FB83261CD129EC36 /* Pods-CPPT.debug.xcconfig */,
+				638AF3BFD29806DE3C78DF4C /* Pods-CPPT.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE8107B016EA778312787FBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AAE5FDEBDBA008CE0A469C2 /* Pods_CPPT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC75393C2404BA95008A2B79 /* Build configuration list for PBXNativeTarget "CPPT" */;
 			buildPhases = (
+				FB65B26C57D7D263412957DE /* [CP] Check Pods Manifest.lock */,
 				FC7539242404BA93008A2B79 /* Sources */,
 				FC7539252404BA93008A2B79 /* Frameworks */,
 				FC7539262404BA93008A2B79 /* Resources */,
+				D139AAB92EF5E1DA582BBE20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +229,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D139AAB92EF5E1DA582BBE20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CPPT/Pods-CPPT-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CPPT/Pods-CPPT-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CPPT/Pods-CPPT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB65B26C57D7D263412957DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CPPT-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC7539242404BA93008A2B79 /* Sources */ = {
@@ -362,6 +431,7 @@
 		};
 		FC75393D2404BA95008A2B79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54732E8FB83261CD129EC36 /* Pods-CPPT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +450,7 @@
 		};
 		FC75393E2404BA95008A2B79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 638AF3BFD29806DE3C78DF4C /* Pods-CPPT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
