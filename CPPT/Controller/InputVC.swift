@@ -34,7 +34,7 @@ class InputVC: UIViewController {
     }
 
     @objc func keyboardWillShow(_ notification: Notification) {
-        constraintBottom.constant = constraintBottomDefault + getKeyboardHeight(notification)
+        constraintBottom.constant = constraintBottomDefault + keyboardHeight(notification)
     }
 
     @objc func keyboardWillHide() {

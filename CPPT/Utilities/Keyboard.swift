@@ -17,18 +17,18 @@ func keyboardStatusObserverRemove(_ observer: Any) {
     NotificationCenter.default.removeObserver(observer)
 }
 
-func getKeyboardHeight(_ notification: Notification) -> CGFloat {
-    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-        return keyboardSize.height
+func keyboardRect(_ notification: Notification) -> CGRect? {
+    if let rect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        return rect
     }
 
-    return 0
+    return nil
 }
 
-func getKeyboardWidth(_ notification: Notification) -> CGFloat {
-    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-        return keyboardSize.width
-    }
+func keyboardHeight(_ notification: Notification) -> CGFloat {
+    return keyboardRect(notification)?.height ?? 0
+}
 
-    return 0
+func keyboardWidth(_ notification: Notification) -> CGFloat {
+    return keyboardRect(notification)?.width ?? 0
 }
