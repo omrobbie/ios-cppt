@@ -22,6 +22,20 @@ class HomeVC: UIViewController {
         print("QRCode Scanner Result: \(code)")
     }
 
+    @IBAction func btnMoreTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Menu", message: nil, preferredStyle: .actionSheet)
+        let actionCancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
+
+        let actionLogout = UIAlertAction(title: "Logout", style: .default) { (_) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+
+        alert.addAction(actionLogout)
+        alert.addAction(actionCancel)
+
+        present(alert, animated: true, completion: nil)
+    }
+
     @IBAction func btnQRCodeScannerTapped(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "QRCodeVC") as? QRCodeVC else {return}
         vc.homeVC = self

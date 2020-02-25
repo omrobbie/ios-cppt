@@ -221,7 +221,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="CPPT" id="NSK-Lr-RlS">
                         <barButtonItem key="backBarButtonItem" title="Kembali" id="6ad-1M-ngB"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="fLC-VB-tT3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="fLC-VB-tT3">
+                            <connections>
+                                <action selector="btnMoreTapped:" destination="hq1-iO-Cmf" id="OuC-aU-3xI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="66H-SE-MKF" id="mml-ml-fh2"/>
