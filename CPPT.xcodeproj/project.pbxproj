@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC2E2FBF2404D67A00563380 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FBE2404D67A00563380 /* HomeVC.swift */; };
+		FC2E2FC32404F4DF00563380 /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC22404F4DF00563380 /* PatientCell.swift */; };
 		FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392B2404BA93008A2B79 /* AppDelegate.swift */; };
 		FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392D2404BA93008A2B79 /* SceneDelegate.swift */; };
 		FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392F2404BA93008A2B79 /* OnboardingVC.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		FC2E2FBE2404D67A00563380 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		FC2E2FC22404F4DF00563380 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCell.swift; sourceTree = "<group>"; };
 		FC7539282404BA93008A2B79 /* CPPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75392B2404BA93008A2B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC75392D2404BA93008A2B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				FC7539362404BA95008A2B79 /* LaunchScreen.storyboard */,
 				FC7539312404BA93008A2B79 /* Main.storyboard */,
+				FC2E2FC22404F4DF00563380 /* PatientCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2E2FC32404F4DF00563380 /* PatientCell.swift in Sources */,
 				FCD00E152404D0DF001B47D8 /* CustomUIButton.swift in Sources */,
 				FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */,
 				FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */,
