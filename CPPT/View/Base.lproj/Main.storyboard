@@ -441,18 +441,310 @@
             <objects>
                 <viewController storyboardIdentifier="InputVC" id="ZOn-Os-SaO" customClass="InputVC" customModule="CPPT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tjs-fO-yJE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMc-Jv-yVa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sex-male" translatesAutoresizingMaskIntoConstraints="NO" id="Nh7-Wg-StE">
+                                        <rect key="frame" x="20" y="28" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="3wX-dE-dQJ"/>
+                                            <constraint firstAttribute="width" constant="16" id="oiO-Up-NWJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Putu Roby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWA-IV-RG9">
+                                        <rect key="frame" x="44" y="24" width="94" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="tm5-ui-v0d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23 Nov 1982" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-uv-sjz">
+                                        <rect key="frame" x="318" y="24" width="76" height="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38 tahun" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iZ-RZ-6hD">
+                                        <rect key="frame" x="341.5" y="44" width="52.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.plaintext" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kpN-jW-XeQ">
+                                        <rect key="frame" x="20" y="56" width="10" height="10"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="SKg-a8-hpL"/>
+                                            <constraint firstAttribute="height" constant="10" id="fEi-ix-xTk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Knj-r5-BAZ">
+                                        <rect key="frame" x="102" y="55.5" width="10" height="11.5"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="1hi-8U-DGb"/>
+                                            <constraint firstAttribute="height" constant="10" id="saz-NE-1Ze"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01.11.11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUs-Oq-wgx">
+                                        <rect key="frame" x="34" y="52" width="52" height="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UGD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wso-vW-zTg">
+                                        <rect key="frame" x="116" y="52" width="29.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Knj-r5-BAZ" firstAttribute="centerY" secondItem="iUs-Oq-wgx" secondAttribute="centerY" id="0FS-6L-9L3"/>
+                                    <constraint firstItem="mmz-uv-sjz" firstAttribute="top" secondItem="EMc-Jv-yVa" secondAttribute="top" constant="24" id="2Zy-k3-ewn"/>
+                                    <constraint firstItem="wso-vW-zTg" firstAttribute="centerY" secondItem="Knj-r5-BAZ" secondAttribute="centerY" id="5ca-CV-gxA"/>
+                                    <constraint firstAttribute="trailing" secondItem="mmz-uv-sjz" secondAttribute="trailing" constant="20" id="8U3-JJ-y6B"/>
+                                    <constraint firstItem="6iZ-RZ-6hD" firstAttribute="top" secondItem="mmz-uv-sjz" secondAttribute="bottom" constant="2" id="JgC-VN-p88"/>
+                                    <constraint firstItem="6iZ-RZ-6hD" firstAttribute="top" secondItem="mmz-uv-sjz" secondAttribute="bottom" constant="2" id="QQ4-iW-l73"/>
+                                    <constraint firstItem="iUs-Oq-wgx" firstAttribute="centerY" secondItem="kpN-jW-XeQ" secondAttribute="centerY" id="Qmn-az-28G"/>
+                                    <constraint firstItem="KWA-IV-RG9" firstAttribute="top" secondItem="EMc-Jv-yVa" secondAttribute="top" constant="24" id="RdB-NS-7L2"/>
+                                    <constraint firstItem="Knj-r5-BAZ" firstAttribute="leading" secondItem="iUs-Oq-wgx" secondAttribute="trailing" constant="16" id="Xo2-NV-6F0"/>
+                                    <constraint firstAttribute="height" constant="100" id="d3b-zR-Xha"/>
+                                    <constraint firstItem="Nh7-Wg-StE" firstAttribute="centerY" secondItem="KWA-IV-RG9" secondAttribute="centerY" id="dhm-Um-3zO"/>
+                                    <constraint firstItem="mmz-uv-sjz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KWA-IV-RG9" secondAttribute="trailing" constant="8" id="fLd-6u-DwJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="6iZ-RZ-6hD" secondAttribute="trailing" constant="20" id="gPR-EY-WVJ"/>
+                                    <constraint firstItem="kpN-jW-XeQ" firstAttribute="leading" secondItem="EMc-Jv-yVa" secondAttribute="leading" constant="20" id="hJs-t2-2rO"/>
+                                    <constraint firstItem="Nh7-Wg-StE" firstAttribute="leading" secondItem="EMc-Jv-yVa" secondAttribute="leading" constant="20" id="iiy-fL-QQe"/>
+                                    <constraint firstItem="iUs-Oq-wgx" firstAttribute="leading" secondItem="kpN-jW-XeQ" secondAttribute="trailing" constant="4" id="lg4-fh-xmB"/>
+                                    <constraint firstItem="kpN-jW-XeQ" firstAttribute="top" secondItem="KWA-IV-RG9" secondAttribute="bottom" constant="8" id="pEs-QK-fZV"/>
+                                    <constraint firstItem="KWA-IV-RG9" firstAttribute="leading" secondItem="Nh7-Wg-StE" secondAttribute="trailing" constant="8" id="tt6-dc-yNn"/>
+                                    <constraint firstItem="wso-vW-zTg" firstAttribute="leading" secondItem="Knj-r5-BAZ" secondAttribute="trailing" constant="4" id="yqZ-Pc-hdp"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F07-Hb-aHi">
+                                <rect key="frame" x="0.0" y="188" width="414" height="1208"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDh-Lw-yGK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1208"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eVS-vg-fB6" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="55.5" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="30e-d2-SXs"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="keluhan pasien..."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obyektif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12K-e0-muT">
+                                                <rect key="frame" x="20" y="175.5" width="81" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NoW-jZ-8X5" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="211" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="gVI-l7-yWd"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="data pemeriksaan.."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analisis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7O-aO-hSg">
+                                                <rect key="frame" x="20" y="331" width="71" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HGC-rI-6Is" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="366.5" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="lNc-rc-J3f"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="kesimpulan pemeriksa..."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perencanaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4St-cK-vMT">
+                                                <rect key="frame" x="20" y="486.5" width="118.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="leP-hT-e3e" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="522" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="EqY-l2-LZZ"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="tindakan apa yang akan dilakukan..."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subyektif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-ZJ-lOU">
+                                                <rect key="frame" x="20" y="20" width="87.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruksi PPA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVz-qc-fX7">
+                                                <rect key="frame" x="20" y="642" width="119.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0r9-Oy-WH7" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="677.5" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="5ok-tg-dUv"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="rutinitas untuk mengontrol kondisi pasien..."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ulasan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wos-jN-fkp">
+                                                <rect key="frame" x="20" y="797.5" width="62.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="49l-5W-ngf" customClass="CustomUITextView" customModule="CPPT" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="833" width="374" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="yq8-4D-8Nf"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="DPJP harus membaca seluruh rencana asuhan sebelum memberikan ulasan..."/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanda Tangan Digital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcw-TB-6I8">
+                                                <rect key="frame" x="20" y="953" width="194.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEM-id-fk1">
+                                                <rect key="frame" x="20" y="988.5" width="374" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-EL-pcb">
+                                                        <rect key="frame" x="1" y="1" width="372" height="198"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="54p-AI-QdE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ahi-EL-pcb" secondAttribute="bottom" constant="1" id="Wrx-Tk-kzd"/>
+                                                    <constraint firstItem="Ahi-EL-pcb" firstAttribute="top" secondItem="sEM-id-fk1" secondAttribute="top" constant="1" id="aWX-kr-eyK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ahi-EL-pcb" secondAttribute="trailing" constant="1" id="q3d-fp-8UP"/>
+                                                    <constraint firstItem="Ahi-EL-pcb" firstAttribute="leading" secondItem="sEM-id-fk1" secondAttribute="leading" constant="1" id="zkV-yE-f3e"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="sEM-id-fk1" secondAttribute="bottom" constant="19.5" id="04L-Cm-AqG"/>
+                                            <constraint firstItem="oVz-qc-fX7" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="0KM-UF-oCV"/>
+                                            <constraint firstItem="49l-5W-ngf" firstAttribute="top" secondItem="wos-jN-fkp" secondAttribute="bottom" constant="8" id="1Lw-AL-M6V"/>
+                                            <constraint firstItem="NoW-jZ-8X5" firstAttribute="top" secondItem="12K-e0-muT" secondAttribute="bottom" constant="8" id="5C8-TI-kW5"/>
+                                            <constraint firstItem="oVz-qc-fX7" firstAttribute="top" secondItem="leP-hT-e3e" secondAttribute="bottom" constant="20" id="5Eg-iS-YmB"/>
+                                            <constraint firstItem="u7O-aO-hSg" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="5ot-l2-qDU"/>
+                                            <constraint firstItem="4St-cK-vMT" firstAttribute="top" secondItem="HGC-rI-6Is" secondAttribute="bottom" constant="20" id="8Ey-Lg-gf5"/>
+                                            <constraint firstItem="12K-e0-muT" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Bs8-nU-AUv"/>
+                                            <constraint firstItem="wF4-ZJ-lOU" firstAttribute="top" secondItem="ZDh-Lw-yGK" secondAttribute="top" constant="20" id="CAT-cn-PC4"/>
+                                            <constraint firstItem="wos-jN-fkp" firstAttribute="top" secondItem="0r9-Oy-WH7" secondAttribute="bottom" constant="20" id="EED-Rf-WOA"/>
+                                            <constraint firstItem="sEM-id-fk1" firstAttribute="top" secondItem="Rcw-TB-6I8" secondAttribute="bottom" constant="8" id="ELO-hj-cmk"/>
+                                            <constraint firstItem="HGC-rI-6Is" firstAttribute="top" secondItem="u7O-aO-hSg" secondAttribute="bottom" constant="8" id="FLw-Ly-QGS"/>
+                                            <constraint firstAttribute="trailing" secondItem="NoW-jZ-8X5" secondAttribute="trailing" constant="20" id="Hwh-p5-fBK"/>
+                                            <constraint firstItem="0r9-Oy-WH7" firstAttribute="top" secondItem="oVz-qc-fX7" secondAttribute="bottom" constant="8" id="JXl-w5-SSb"/>
+                                            <constraint firstItem="leP-hT-e3e" firstAttribute="top" secondItem="4St-cK-vMT" secondAttribute="bottom" constant="8" id="JjO-sd-2Kl"/>
+                                            <constraint firstItem="NoW-jZ-8X5" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Kym-Cx-Wws"/>
+                                            <constraint firstItem="wos-jN-fkp" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="ORR-d7-uwn"/>
+                                            <constraint firstItem="HGC-rI-6Is" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Qt2-gj-NIH"/>
+                                            <constraint firstAttribute="trailing" secondItem="HGC-rI-6Is" secondAttribute="trailing" constant="20" id="RHe-aW-Qe4"/>
+                                            <constraint firstAttribute="trailing" secondItem="eVS-vg-fB6" secondAttribute="trailing" constant="20" id="SF4-GT-zbz"/>
+                                            <constraint firstAttribute="trailing" secondItem="49l-5W-ngf" secondAttribute="trailing" constant="20" id="T3e-AF-Ujg"/>
+                                            <constraint firstItem="wF4-ZJ-lOU" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="Xfl-29-WkO"/>
+                                            <constraint firstAttribute="trailing" secondItem="0r9-Oy-WH7" secondAttribute="trailing" constant="20" id="Ykw-RB-aVY"/>
+                                            <constraint firstItem="sEM-id-fk1" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="bHN-jZ-5Ma"/>
+                                            <constraint firstItem="u7O-aO-hSg" firstAttribute="top" secondItem="NoW-jZ-8X5" secondAttribute="bottom" constant="20" id="bli-zn-RbG"/>
+                                            <constraint firstItem="Rcw-TB-6I8" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="eCt-G2-0Ya"/>
+                                            <constraint firstItem="Rcw-TB-6I8" firstAttribute="top" secondItem="49l-5W-ngf" secondAttribute="bottom" constant="20" id="j6z-rP-UEh"/>
+                                            <constraint firstItem="0r9-Oy-WH7" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="mjM-8H-we8"/>
+                                            <constraint firstAttribute="trailing" secondItem="leP-hT-e3e" secondAttribute="trailing" constant="20" id="oHY-L0-zXK"/>
+                                            <constraint firstItem="4St-cK-vMT" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="pVH-LE-bKS"/>
+                                            <constraint firstAttribute="trailing" secondItem="sEM-id-fk1" secondAttribute="trailing" constant="20" id="qmM-GU-kbP"/>
+                                            <constraint firstItem="eVS-vg-fB6" firstAttribute="top" secondItem="wF4-ZJ-lOU" secondAttribute="bottom" constant="8" id="utg-yq-v9G"/>
+                                            <constraint firstItem="49l-5W-ngf" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="wkE-nY-jfD"/>
+                                            <constraint firstItem="leP-hT-e3e" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="wpc-Sm-Hgf"/>
+                                            <constraint firstItem="eVS-vg-fB6" firstAttribute="leading" secondItem="ZDh-Lw-yGK" secondAttribute="leading" constant="20" id="yPq-wk-reV"/>
+                                            <constraint firstItem="12K-e0-muT" firstAttribute="top" secondItem="eVS-vg-fB6" secondAttribute="bottom" constant="20" id="zDT-Po-vnp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZDh-Lw-yGK" secondAttribute="trailing" id="bIT-jn-fGs"/>
+                                    <constraint firstItem="ZDh-Lw-yGK" firstAttribute="width" secondItem="F07-Hb-aHi" secondAttribute="width" id="j0G-pD-N8d"/>
+                                    <constraint firstItem="ZDh-Lw-yGK" firstAttribute="leading" secondItem="F07-Hb-aHi" secondAttribute="leading" id="kiS-yq-jPy"/>
+                                    <constraint firstItem="ZDh-Lw-yGK" firstAttribute="height" secondItem="F07-Hb-aHi" secondAttribute="height" priority="250" id="qxB-Kd-omx"/>
+                                    <constraint firstItem="ZDh-Lw-yGK" firstAttribute="top" secondItem="F07-Hb-aHi" secondAttribute="top" id="swz-r7-deO"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZDh-Lw-yGK" secondAttribute="bottom" id="yYs-Tg-V4d"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EMc-Jv-yVa" firstAttribute="leading" secondItem="PBq-g7-scx" secondAttribute="leading" id="DTk-Lb-fue"/>
+                            <constraint firstItem="F07-Hb-aHi" firstAttribute="top" secondItem="EMc-Jv-yVa" secondAttribute="bottom" id="IYt-Pd-KUQ"/>
+                            <constraint firstItem="F07-Hb-aHi" firstAttribute="leading" secondItem="PBq-g7-scx" secondAttribute="leading" id="crU-1p-jJa"/>
+                            <constraint firstItem="PBq-g7-scx" firstAttribute="trailing" secondItem="F07-Hb-aHi" secondAttribute="trailing" id="kRX-Is-c2I"/>
+                            <constraint firstItem="EMc-Jv-yVa" firstAttribute="top" secondItem="PBq-g7-scx" secondAttribute="top" id="oOe-dX-iMX"/>
+                            <constraint firstItem="EMc-Jv-yVa" firstAttribute="trailing" secondItem="PBq-g7-scx" secondAttribute="trailing" id="u4B-yB-hnz"/>
+                            <constraint firstItem="PBq-g7-scx" firstAttribute="bottom" secondItem="F07-Hb-aHi" secondAttribute="bottom" id="uqo-p1-7b5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PBq-g7-scx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Asuhan Keperawatan" id="hGL-nx-ryr">
                         <barButtonItem key="rightBarButtonItem" title="Simpan" id="r1z-5O-M4a"/>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="1430"/>
+                    <connections>
+                        <outlet property="constraintBottom" destination="04L-Cm-AqG" id="69u-5e-ItU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="867"/>
+            <point key="canvasLocation" x="2498.5507246376815" y="866.51785714285711"/>
         </scene>
         <!--Riwayat Asuhan-->
         <scene sceneID="EKW-61-f4m">

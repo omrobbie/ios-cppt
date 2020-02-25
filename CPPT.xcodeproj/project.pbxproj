@@ -13,6 +13,8 @@
 		FC2E2FC7240505EA00563380 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC6240505EA00563380 /* HistoryCell.swift */; };
 		FC2E2FC9240507D800563380 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC8240507D800563380 /* HistoryVC.swift */; };
 		FC2E2FCB240510A000563380 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCA240510A000563380 /* InputVC.swift */; };
+		FC2E2FCD2405149C00563380 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCC2405149C00563380 /* CustomUITextView.swift */; };
+		FC2E2FD024051FD200563380 /* KeyboardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCF24051FD200563380 /* KeyboardSize.swift */; };
 		FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392B2404BA93008A2B79 /* AppDelegate.swift */; };
 		FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392D2404BA93008A2B79 /* SceneDelegate.swift */; };
 		FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392F2404BA93008A2B79 /* OnboardingVC.swift */; };
@@ -30,6 +32,8 @@
 		FC2E2FC6240505EA00563380 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		FC2E2FC8240507D800563380 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		FC2E2FCA240510A000563380 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
+		FC2E2FCC2405149C00563380 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
+		FC2E2FCF24051FD200563380 /* KeyboardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSize.swift; sourceTree = "<group>"; };
 		FC7539282404BA93008A2B79 /* CPPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75392B2404BA93008A2B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC75392D2404BA93008A2B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC2E2FCE24051F4800563380 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FC2E2FCF24051FD200563380 /* KeyboardSize.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		FC75391F2404BA93008A2B79 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 		FC75392A2404BA93008A2B79 /* CPPT */ = {
 			isa = PBXGroup;
 			children = (
+				FC2E2FCE24051F4800563380 /* Utilities */,
 				FCD00E132404CF95001B47D8 /* CustomViews */,
 				FCD00E112404CE37001B47D8 /* Model */,
 				FCD00E102404CE31001B47D8 /* View */,
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD00E142404D0DF001B47D8 /* CustomUIButton.swift */,
+				FC2E2FCC2405149C00563380 /* CustomUITextView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -204,6 +218,8 @@
 				FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */,
 				FC2E2FBF2404D67A00563380 /* HomeVC.swift in Sources */,
 				FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */,
+				FC2E2FD024051FD200563380 /* KeyboardSize.swift in Sources */,
+				FC2E2FCD2405149C00563380 /* CustomUITextView.swift in Sources */,
 				FCD00E172404D3D9001B47D8 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
