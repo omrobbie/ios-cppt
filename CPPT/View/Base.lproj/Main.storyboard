@@ -420,7 +420,7 @@
                         <viewLayoutGuide key="safeArea" id="6Ix-rR-5dW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Data Pasien" id="qjw-u5-a96">
-                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="Msu-oG-GTh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" image="plus" catalog="system" id="Msu-oG-GTh"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RRu-33-Its" id="dPz-o4-NKk"/>
@@ -694,7 +694,7 @@
                         <viewLayoutGuide key="safeArea" id="da6-gE-LLk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Riwayat Asuhan" id="59r-f0-OdN">
-                        <barButtonItem key="rightBarButtonItem" title="Ubah" id="FBa-Gv-AA3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ubah" image="square.and.pencil" catalog="system" id="FBa-Gv-AA3"/>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
@@ -800,7 +800,9 @@
         <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="login" width="512" height="512"/>
         <image name="pin.fill" catalog="system" width="58" height="64"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
         <image name="sex-male" width="24" height="24"/>
         <image name="signature" catalog="system" width="64" height="44"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
 </document>
