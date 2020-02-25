@@ -25,25 +25,20 @@ class InputVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        checkIfKeyboardShown()
+        keyboardStatusObserver(self, willShow: #selector(keyboardWillShow(_:)), willHide: #selector(keyboardWillHide))
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
+        keyboardStatusObserverRemove(self)
     }
 
-    @objc func keyboardWillAppear(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         constraintBottom.constant = constraintBottomDefault + getKeyboardHeight(notification)
     }
 
-    @objc func keyboardWillDisappear() {
+    @objc func keyboardWillHide() {
         constraintBottom.constant = constraintBottomDefault
-    }
-
-    func checkIfKeyboardShown() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     @IBAction func btnSignatureStartTapped(_ sender: Any) {

@@ -15,7 +15,7 @@
 		FC2E2FC9240507D800563380 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FC8240507D800563380 /* HistoryVC.swift */; };
 		FC2E2FCB240510A000563380 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCA240510A000563380 /* InputVC.swift */; };
 		FC2E2FCD2405149C00563380 /* CustomUITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCC2405149C00563380 /* CustomUITextView.swift */; };
-		FC2E2FD024051FD200563380 /* KeyboardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCF24051FD200563380 /* KeyboardSize.swift */; };
+		FC2E2FD024051FD200563380 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FCF24051FD200563380 /* Keyboard.swift */; };
 		FC2E2FD224052AB500563380 /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FD124052AB500563380 /* QRCodeScanner.swift */; };
 		FC2E2FD424052B3100563380 /* QRCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E2FD324052B3000563380 /* QRCodeVC.swift */; };
 		FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392B2404BA93008A2B79 /* AppDelegate.swift */; };
@@ -39,7 +39,7 @@
 		FC2E2FC8240507D800563380 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		FC2E2FCA240510A000563380 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
 		FC2E2FCC2405149C00563380 /* CustomUITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextView.swift; sourceTree = "<group>"; };
-		FC2E2FCF24051FD200563380 /* KeyboardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSize.swift; sourceTree = "<group>"; };
+		FC2E2FCF24051FD200563380 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		FC2E2FD124052AB500563380 /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
 		FC2E2FD324052B3000563380 /* QRCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeVC.swift; sourceTree = "<group>"; };
 		FC7539282404BA93008A2B79 /* CPPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,7 +69,7 @@
 		FC2E2FCE24051F4800563380 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FC2E2FCF24051FD200563380 /* KeyboardSize.swift */,
+				FC2E2FCF24051FD200563380 /* Keyboard.swift */,
 				FC2E2FD124052AB500563380 /* QRCodeScanner.swift */,
 			);
 			path = Utilities;
@@ -294,7 +294,7 @@
 				FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */,
 				FC2E2FBF2404D67A00563380 /* HomeVC.swift in Sources */,
 				FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */,
-				FC2E2FD024051FD200563380 /* KeyboardSize.swift in Sources */,
+				FC2E2FD024051FD200563380 /* Keyboard.swift in Sources */,
 				FC2E2FCD2405149C00563380 /* CustomUITextView.swift in Sources */,
 				FCD00E172404D3D9001B47D8 /* LoginVC.swift in Sources */,
 			);
