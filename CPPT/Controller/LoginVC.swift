@@ -14,9 +14,29 @@ class LoginVC: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btnLogin: CustomUIButton!
 
+    private var btnLoginCornerRadiusDefault: CGFloat = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnLoginCornerRadiusDefault = btnLogin.layer.cornerRadius
         setupUI()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        keyboardStatusObserver(self, willShow: #selector(keyboardWillShow(_:)), willHide: #selector(keyboardWillHide))
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        keyboardStatusObserverRemove(self)
+    }
+
+    @objc func keyboardWillShow(_ notification: Notification) {
+        btnLogin.layer.cornerRadius = 0
+    }
+
+    @objc func keyboardWillHide() {
+        btnLogin.layer.cornerRadius = btnLoginCornerRadiusDefault
     }
 
     func setupUI() {
