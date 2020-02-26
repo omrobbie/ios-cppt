@@ -49,6 +49,7 @@ class HistoryVC: UIViewController {
         txtUserName.text = history.userName
         txtSubjective.text = history.subjective
         txtObjective.text = history.objective
+        txtPlan.text = history.plan
         txtAssessment.text = history.assessment
         txtInstruction.text = history.instruction
         txtReview.text = history.review
