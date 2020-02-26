@@ -45,8 +45,12 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func btnLoginTapped(_ sender: Any) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "NavigationController") else {return}
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        guard let email = txtEmail.text, let password = txtPassword.text else {return}
+
+        signIn(sender: self, email: email, password: password) {
+            guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "NavigationController") else {return}
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
