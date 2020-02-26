@@ -11,6 +11,7 @@ import UIKit
 class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var txtSearch: UISearchBar!
 
     private var patients = [Patient]()
 
@@ -18,24 +19,43 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        txtSearch.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        listenerRegister = refPatient.order(by: NAME).addSnapshotListener({ (snapshot, error) in
-            if let error = error {
-                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
-                return
-            }
-
-            self.patients = Patient.parseData(snapshot: snapshot)
-            self.tableView.reloadData()
-        })
+        listenerStart()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         listernerRemove()
+    }
+
+    func listenerStart() {
+        let search = txtSearch.text ?? ""
+
+        if search.isEmpty {
+            listenerRegister = refPatient.order(by: NAME).addSnapshotListener({ (snapshot, error) in
+                if let error = error {
+                    alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                    return
+                }
+
+                self.patients = Patient.parseData(snapshot: snapshot)
+                self.tableView.reloadData()
+            })
+        } else {
+            listenerRegister = refPatient.order(by: NAME).whereField(NAME, in: [search]).addSnapshotListener({ (snapshot, error) in
+                if let error = error {
+                    alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                    return
+                }
+
+                self.patients = Patient.parseData(snapshot: snapshot)
+                self.tableView.reloadData()
+            })
+        }
     }
 
     func foundQRCode(code: String) {
@@ -82,5 +102,13 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") as? PatientDetailVC else {return}
         vc.patient = patients[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension HomeVC: UISearchBarDelegate {
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        listernerRemove()
+        listenerStart()
     }
 }

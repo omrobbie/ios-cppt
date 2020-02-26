@@ -252,6 +252,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="66H-SE-MKF" id="mml-ml-fh2"/>
+                        <outlet property="txtSearch" destination="IiJ-Ks-i4p" id="RxX-0L-LqD"/>
                         <segue destination="GGD-nf-PN5" kind="push" id="Ecn-ll-g1h"/>
                         <segue destination="hPd-Zc-nsh" kind="presentation" id="A9Z-6R-1XS"/>
                     </connections>
