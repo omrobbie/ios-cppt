@@ -60,4 +60,26 @@ class History {
 
         return histories
     }
+
+    class func parseData(snapshot: DocumentSnapshot?) -> History? {
+        guard let snapshot = snapshot else {return nil}
+
+        if let data = snapshot.data() {
+            let documentId = snapshot.documentID
+            
+            let subjective = data[SUBJECTIVE] as? String ?? ""
+            let objective = data[OBJECTIVE] as? String ?? ""
+            let assessment = data[ASSESSMENT] as? String ?? ""
+            let plan = data[PLAN] as? String ?? ""
+            let instruction = data[INSTRUCTION] as? String ?? ""
+            let review = data[REVIEW] as? String ?? ""
+            let userName = data[USER_NAME] as? String ?? ""
+            let userType = data[USER_TYPE] as? String ?? ""
+            let timestampServer = data[TIMESTAMP] as? Timestamp ?? Timestamp()
+
+            return History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer)
+        }
+
+        return nil
+    }
 }

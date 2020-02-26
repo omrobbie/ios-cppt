@@ -35,8 +35,38 @@ class HistoryVC: UIViewController {
         setupUI()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let patient = patient else {return}
+        refHistory = refPatient.document(patient.documentId).collection(REF_HISTORY)
+        guard let history = history else {return}
+
+        listenerRegister = refHistory.document(history.documentId).addSnapshotListener({ (snapshot, error) in
+            if let error = error {
+                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                return
+            }
+
+            if let dataHistory = History.parseData(snapshot: snapshot) {
+                self.txtTimestamp.text = dataHistory.timestamp.toString(format: .dateTime)
+                self.txtUserName.text = dataHistory.userName
+                self.txtSubjective.text = dataHistory.subjective
+                self.txtObjective.text = dataHistory.objective
+                self.txtPlan.text = dataHistory.plan
+                self.txtAssessment.text = dataHistory.assessment
+                self.txtInstruction.text = dataHistory.instruction
+                self.txtReview.text = dataHistory.review
+            }
+        })
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        listernerRemove()
+    }
+
     func setupUI() {
-        guard let patient = patient, let history = history else {return}
+        guard let patient = patient else {return}
 
         txtNrm.text = patient.nrm
         txtName.text = patient.name
@@ -44,15 +74,6 @@ class HistoryVC: UIViewController {
         txtBirthDate.text = patient.birthDate.toString()
         txtRoomStatus.text = patient.roomStatus
         txtAge.text = patient.birthDate.toAge()
-
-        txtTimestamp.text = history.timestamp.toString(format: .dateTime)
-        txtUserName.text = history.userName
-        txtSubjective.text = history.subjective
-        txtObjective.text = history.objective
-        txtPlan.text = history.plan
-        txtAssessment.text = history.assessment
-        txtInstruction.text = history.instruction
-        txtReview.text = history.review
     }
 
     @IBAction func btnEditTapped(_ sender: Any) {
