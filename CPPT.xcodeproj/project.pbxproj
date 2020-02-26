@@ -24,6 +24,7 @@
 		FC313F312406283B0076333D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC313F302406283B0076333D /* Constants.swift */; };
 		FC313F35240638C20076333D /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC313F34240638C20076333D /* Patient.swift */; };
 		FC313F37240645270076333D /* DateToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC313F36240645270076333D /* DateToString.swift */; };
+		FC313F3924065AA10076333D /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC313F3824065AA10076333D /* History.swift */; };
 		FC75392C2404BA93008A2B79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392B2404BA93008A2B79 /* AppDelegate.swift */; };
 		FC75392E2404BA93008A2B79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392D2404BA93008A2B79 /* SceneDelegate.swift */; };
 		FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC75392F2404BA93008A2B79 /* OnboardingVC.swift */; };
@@ -54,6 +55,7 @@
 		FC313F302406283B0076333D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC313F34240638C20076333D /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		FC313F36240645270076333D /* DateToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateToString.swift; sourceTree = "<group>"; };
+		FC313F3824065AA10076333D /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		FC7539282404BA93008A2B79 /* CPPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC75392B2404BA93008A2B79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC75392D2404BA93008A2B79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				FC313F302406283B0076333D /* Constants.swift */,
 				FC313F34240638C20076333D /* Patient.swift */,
+				FC313F3824065AA10076333D /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				FC2E2FC52404FAB900563380 /* PatientDetailVC.swift in Sources */,
 				FCD00E152404D0DF001B47D8 /* CustomUIButton.swift in Sources */,
 				FC2E2FD224052AB500563380 /* QRCodeScanner.swift in Sources */,
+				FC313F3924065AA10076333D /* History.swift in Sources */,
 				FC2E2FC7240505EA00563380 /* HistoryCell.swift in Sources */,
 				FC7539302404BA93008A2B79 /* OnboardingVC.swift in Sources */,
 				FC2E2FCB240510A000563380 /* InputVC.swift in Sources */,

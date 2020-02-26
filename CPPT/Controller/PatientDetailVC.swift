@@ -29,6 +29,30 @@ class PatientDetailVC: UIViewController {
         tableView.dataSource = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let patient = patient else {return}
+        refHistory = refHistory.document(patient.documentId).collection(REF_HISTORY)
+
+        listenHistory = refHistory.order(by: TIMESTAMP, descending: true).addSnapshotListener({ (snapshot, error) in
+            if let error = error {
+                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                return
+            }
+
+            guard let snapshot = snapshot else {return}
+
+            for document in snapshot.documents {
+                print(document.data())
+            }
+        })
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        removeListener(listener: listenHistory)
+    }
+
     func setupUI() {
         guard let patient = patient else {return}
 
