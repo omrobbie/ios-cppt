@@ -18,3 +18,18 @@ func signIn(sender: UIViewController, email: String, password: String, completio
         completion()
     }
 }
+
+func signOut(sender: UIViewController, completion: @escaping () -> ()) {
+    do {
+        try Auth.auth().signOut()
+        completion()
+    } catch {
+        alertMessage(sender: sender, type: .error, message: error.localizedDescription, completion: nil)
+    }
+}
+
+func isUserNotSignIn(completion: @escaping () -> ()) {
+    if Auth.auth().currentUser == nil {
+        completion()
+    }
+}

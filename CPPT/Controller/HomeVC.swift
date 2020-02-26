@@ -26,8 +26,12 @@ class HomeVC: UIViewController {
         let alert = UIAlertController(title: "Menu", message: nil, preferredStyle: .actionSheet)
         let actionCancel = UIAlertAction(title: "Batal", style: .cancel, handler: nil)
 
-        let actionLogout = UIAlertAction(title: "Logout", style: .default) { (_) in
-            alert.dismiss(animated: true, completion: nil)
+        let actionLogout = UIAlertAction(title: "Keluar", style: .default) { (_) in
+            signOut(sender: self) {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnboardingVC") else {return}
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
         }
 
         alert.addAction(actionLogout)
