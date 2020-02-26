@@ -66,6 +66,7 @@ class PatientDetailVC: UIViewController {
 
     @IBAction func btnAddTapped(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "InputVC") as? InputVC else {return}
+        vc.patient = patient
         navigationController?.pushViewController(vc, animated: true)
     }
 }

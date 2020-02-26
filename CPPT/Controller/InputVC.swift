@@ -11,15 +11,26 @@ import SignaturePad
 
 class InputVC: UIViewController {
 
+    @IBOutlet weak var txtNrm: UILabel!
+    @IBOutlet weak var txtName: UILabel!
+    @IBOutlet weak var imgGender: UIImageView!
+    @IBOutlet weak var txtBirthDate: UILabel!
+    @IBOutlet weak var txtRoomStatus: UILabel!
+    @IBOutlet weak var txtAge: UILabel!
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var constraintBottom: NSLayoutConstraint!
     @IBOutlet weak var signaturePad: SignaturePad!
     @IBOutlet weak var btnSignatureStart: CustomUIButton!
 
+    var patient: Patient?
+
     private var constraintBottomDefault: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+
         constraintBottomDefault = constraintBottom.constant
     }
 
@@ -39,6 +50,17 @@ class InputVC: UIViewController {
 
     @objc func keyboardWillHide() {
         constraintBottom.constant = constraintBottomDefault
+    }
+
+    func setupUI() {
+        guard let patient = patient else {return}
+
+        txtNrm.text = patient.nrm
+        txtName.text = patient.name
+        imgGender.image = patient.gender ? #imageLiteral(resourceName: "sex-male") : #imageLiteral(resourceName: "sex-female")
+        txtBirthDate.text = patient.birthDate.toString()
+        txtRoomStatus.text = patient.roomStatus
+        txtAge.text = patient.birthDate.toAge()
     }
 
     @IBAction func btnSignatureStartTapped(_ sender: Any) {

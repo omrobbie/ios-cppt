@@ -816,8 +816,14 @@
                     <connections>
                         <outlet property="btnSignatureStart" destination="TqK-RI-k84" id="4UR-cf-gDu"/>
                         <outlet property="constraintBottom" destination="04L-Cm-AqG" id="69u-5e-ItU"/>
+                        <outlet property="imgGender" destination="Nh7-Wg-StE" id="KDq-lg-hro"/>
                         <outlet property="scrollView" destination="F07-Hb-aHi" id="l1g-9u-sMb"/>
                         <outlet property="signaturePad" destination="Ahi-EL-pcb" id="9X7-x7-252"/>
+                        <outlet property="txtAge" destination="6iZ-RZ-6hD" id="TQW-5k-7ZV"/>
+                        <outlet property="txtBirthDate" destination="mmz-uv-sjz" id="N4E-XV-7pY"/>
+                        <outlet property="txtName" destination="KWA-IV-RG9" id="2wz-Mv-wtZ"/>
+                        <outlet property="txtNrm" destination="iUs-Oq-wgx" id="Itd-a4-WuZ"/>
+                        <outlet property="txtRoomStatus" destination="wso-vW-zTg" id="d6r-T2-lBW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
