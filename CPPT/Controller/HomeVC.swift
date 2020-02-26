@@ -59,7 +59,27 @@ class HomeVC: UIViewController {
     }
 
     func foundQRCode(code: String) {
-        print("QRCode Scanner Result: \(code)")
+        refPatient.whereField(NRM, in: [code]).getDocuments { (snapshot, error) in
+            if let error = error {
+                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                return
+            }
+
+            guard let snapshot = snapshot else {return}
+            let patient = Patient.parseData(snapshot: snapshot)
+
+            if patient.count > 0 {
+                self.segueToPatientDetail(patient: patient[0])
+            } else {
+                alertMessage(sender: self, type: .info, message: "Data QRCode tidak ditemukan!", completion: nil)
+            }
+        }
+    }
+
+    func segueToPatientDetail(patient: Patient) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") as? PatientDetailVC else {return}
+        vc.patient = patient
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func btnMoreTapped(_ sender: Any) {
@@ -99,9 +119,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") as? PatientDetailVC else {return}
-        vc.patient = patients[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        segueToPatientDetail(patient: patients[indexPath.row])
     }
 }
 
