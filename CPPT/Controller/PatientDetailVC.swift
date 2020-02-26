@@ -81,11 +81,11 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
         cell.setupCell(history: history)
 
         switch history.userType {
-        case "Dokters":
+        case "Dokter":
             cell.backgroundColor = #colorLiteral(red: 0.9039862752, green: 0.8986125588, blue: 0.9081169367, alpha: 1)
         case "Perawat", "Bidan":
             cell.backgroundColor = #colorLiteral(red: 0.7701118588, green: 0.8777749538, blue: 1, alpha: 1)
-        case "Gizi", "Farmasi", "Dokter":
+        case "Gizi", "Farmasi":
             cell.backgroundColor = #colorLiteral(red: 0.9146185517, green: 1, blue: 0.890776813, alpha: 1)
         default:
             cell.backgroundColor = .none
