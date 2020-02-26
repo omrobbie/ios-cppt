@@ -7,5 +7,8 @@ target 'CPPT' do
 
   # Pods for CPPT
   pod 'SignaturePad'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
 
 end
