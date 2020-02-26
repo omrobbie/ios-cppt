@@ -35,7 +35,6 @@ class PatientDetailVC: UIViewController {
         super.viewDidAppear(animated)
         guard let patient = patient else {return}
         refHistory = refPatient.document(patient.documentId).collection(REF_HISTORY)
-        guard let refHistory = refHistory else {return}
 
         listenerRegister = refHistory.order(by: TIMESTAMP, descending: true).addSnapshotListener({ (snapshot, error) in
             if let error = error {

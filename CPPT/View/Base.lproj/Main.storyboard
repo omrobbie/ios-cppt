@@ -810,7 +810,11 @@
                         <viewLayoutGuide key="safeArea" id="PBq-g7-scx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Asuhan Keperawatan" id="hGL-nx-ryr">
-                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="r1z-5O-M4a"/>
+                        <barButtonItem key="rightBarButtonItem" title="Simpan" id="r1z-5O-M4a">
+                            <connections>
+                                <action selector="btnSaveTapped:" destination="ZOn-Os-SaO" id="Ouk-PC-lnT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1430"/>
                     <connections>
@@ -820,10 +824,16 @@
                         <outlet property="scrollView" destination="F07-Hb-aHi" id="l1g-9u-sMb"/>
                         <outlet property="signaturePad" destination="Ahi-EL-pcb" id="9X7-x7-252"/>
                         <outlet property="txtAge" destination="6iZ-RZ-6hD" id="TQW-5k-7ZV"/>
+                        <outlet property="txtAssessment" destination="HGC-rI-6Is" id="ZVw-Al-dgZ"/>
                         <outlet property="txtBirthDate" destination="mmz-uv-sjz" id="N4E-XV-7pY"/>
+                        <outlet property="txtInstruction" destination="0r9-Oy-WH7" id="MBm-kp-tAb"/>
                         <outlet property="txtName" destination="KWA-IV-RG9" id="2wz-Mv-wtZ"/>
                         <outlet property="txtNrm" destination="iUs-Oq-wgx" id="Itd-a4-WuZ"/>
+                        <outlet property="txtObjective" destination="NoW-jZ-8X5" id="gFA-rt-gMI"/>
+                        <outlet property="txtPlan" destination="leP-hT-e3e" id="Cxu-PY-gNc"/>
+                        <outlet property="txtReview" destination="49l-5W-ngf" id="ReX-x3-4G5"/>
                         <outlet property="txtRoomStatus" destination="wso-vW-zTg" id="d6r-T2-lBW"/>
+                        <outlet property="txtSubjective" destination="eVS-vg-fB6" id="lbl-cl-DyK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a7o-c2-L9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

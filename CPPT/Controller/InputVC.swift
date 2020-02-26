@@ -8,6 +8,7 @@
 
 import UIKit
 import SignaturePad
+import Firebase
 
 class InputVC: UIViewController {
 
@@ -23,6 +24,13 @@ class InputVC: UIViewController {
     @IBOutlet weak var signaturePad: SignaturePad!
     @IBOutlet weak var btnSignatureStart: CustomUIButton!
 
+    @IBOutlet weak var txtSubjective: CustomUITextView!
+    @IBOutlet weak var txtObjective: CustomUITextView!
+    @IBOutlet weak var txtAssessment: CustomUITextView!
+    @IBOutlet weak var txtPlan: CustomUITextView!
+    @IBOutlet weak var txtInstruction: CustomUITextView!
+    @IBOutlet weak var txtReview: CustomUITextView!
+
     var patient: Patient?
 
     private var constraintBottomDefault: CGFloat = 0.0
@@ -37,6 +45,9 @@ class InputVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         keyboardStatusObserver(self, willShow: #selector(keyboardWillShow(_:)), willHide: #selector(keyboardWillHide))
+
+        guard let patient = patient else {return}
+        refHistory = refPatient.document(patient.documentId).collection(REF_HISTORY)
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -76,5 +87,41 @@ class InputVC: UIViewController {
 
     @IBAction func btnSignatureClearTapped(_ sender: Any) {
         signaturePad.clear()
+    }
+
+    @IBAction func btnSaveTapped(_ sender: Any) {
+        let subjective = !txtSubjective.isEmpty ? txtSubjective.text ?? "" : ""
+        let objective = !txtObjective.isEmpty ? txtObjective.text ?? "" : ""
+        let assessment = !txtAssessment.isEmpty ? txtAssessment.text ?? "" : ""
+        let plan = !txtPlan.isEmpty ? txtPlan.text ?? "" : ""
+        let instruction = !txtInstruction.isEmpty ? txtInstruction.text ?? "" : ""
+        let review = !txtReview.isEmpty ? txtReview.text ?? "" : ""
+        let userName = "user name"
+        let userType = "user type"
+
+        Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
+            let newDocument = refHistory.document()
+
+            transaction.setData([
+                SUBJECTIVE: subjective,
+                OBJECTIVE: objective,
+                ASSESSMENT: assessment,
+                PLAN: plan,
+                INSTRUCTION: instruction,
+                REVIEW: review,
+                USER_NAME: userName,
+                USER_TYPE: userType,
+                TIMESTAMP: FieldValue.serverTimestamp()
+            ], forDocument: newDocument)
+
+            return nil
+        }) { (object, error) in
+            if let error = error {
+                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                return
+            }
+
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

@@ -28,7 +28,7 @@ let USER_TYPE = "userType"
 let TIMESTAMP = "timestamp"
 
 var refPatient: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
-var refHistory: CollectionReference?
+var refHistory: CollectionReference = refPatient
 
 var listenerRegister: ListenerRegistration?
 
