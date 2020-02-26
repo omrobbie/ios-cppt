@@ -12,10 +12,33 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    private var patients = [Patients]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        listenPatients = refPatients.order(by: NAME).addSnapshotListener({ (snapshot, error) in
+            if let error = error {
+                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                return
+            }
+
+            guard let snapshot = snapshot else {return}
+
+            for document in snapshot.documents {
+                print(document.data())
+            }
+        })
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        removeListener(listener: listenPatients)
     }
 
     func foundQRCode(code: String) {
