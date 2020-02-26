@@ -117,12 +117,12 @@ class InputVC: UIViewController {
     }
 
     @IBAction func btnSaveTapped(_ sender: Any) {
-        let subjective = !txtSubjective.isEmpty ? txtSubjective.text ?? "" : ""
-        let objective = !txtObjective.isEmpty ? txtObjective.text ?? "" : ""
-        let assessment = !txtAssessment.isEmpty ? txtAssessment.text ?? "" : ""
-        let plan = !txtPlan.isEmpty ? txtPlan.text ?? "" : ""
-        let instruction = !txtInstruction.isEmpty ? txtInstruction.text ?? "" : ""
-        let review = !txtReview.isEmpty ? txtReview.text ?? "" : ""
+        let subjective = txtSubjective.text ?? ""
+        let objective = txtObjective.text ?? ""
+        let assessment = txtAssessment.text ?? ""
+        let plan = txtPlan.text ?? ""
+        let instruction = txtInstruction.text ?? ""
+        let review = txtReview.text ?? ""
         let userName = name ?? ""
         let userType = type ?? ""
 
