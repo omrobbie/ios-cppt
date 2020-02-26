@@ -1,5 +1,5 @@
 //
-//  Patients.swift
+//  Patient.swift
 //  CPPT
 //
 //  Created by omrobbie on 26/02/20.
@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class Patients {
+class Patient {
 
     private(set) var documentId: String!
     private(set) var nrm: String!
@@ -27,8 +27,8 @@ class Patients {
         self.roomStatus = roomStatus
     }
 
-    class func parseData(snapshot: QuerySnapshot?) -> [Patients] {
-        var patients = [Patients]()
+    class func parseData(snapshot: QuerySnapshot?) -> [Patient] {
+        var patients = [Patient]()
         guard let snapshot = snapshot else {return patients}
 
         for document in snapshot.documents {
@@ -41,7 +41,7 @@ class Patients {
             let birthDateTimestamp = data[BIRTH_DATE] as? Timestamp ?? Timestamp()
             let roomStatus = data[ROOM_STATUS] as? String ?? ""
 
-            let newElement = Patients(documentId: documentId, nrm: nrm, name: name, gender: gender, birthTimeStamp: birthDateTimestamp, roomStatus: roomStatus)
+            let newElement = Patient(documentId: documentId, nrm: nrm, name: name, gender: gender, birthTimeStamp: birthDateTimestamp, roomStatus: roomStatus)
             patients.append(newElement)
         }
 

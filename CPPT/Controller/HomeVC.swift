@@ -12,7 +12,7 @@ class HomeVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private var patients = [Patients]()
+    private var patients = [Patient]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class HomeVC: UIViewController {
                 return
             }
 
-            self.patients = Patients.parseData(snapshot: snapshot)
+            self.patients = Patient.parseData(snapshot: snapshot)
             self.tableView.reloadData()
         })
     }
@@ -74,7 +74,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell") as? PatientCell else {return UITableViewCell()}
-        cell.setupCell(patients: patients[indexPath.row])
+        cell.setupCell(patient: patients[indexPath.row])
         return cell
     }
 

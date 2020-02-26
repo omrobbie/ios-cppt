@@ -16,12 +16,12 @@ class PatientCell: UITableViewCell {
     @IBOutlet weak var txtRoomStatus: UILabel!
     @IBOutlet weak var txtAge: UILabel!
 
-    func setupCell(patients: Patients) {
-        txtNrm.text = patients.nrm
-        txtName.text = patients.name
-        imgGender.image = patients.gender ? #imageLiteral(resourceName: "sex-male") : #imageLiteral(resourceName: "sex-female")
-        txtBirthDate.text = patients.birthDate.toString()
-        txtRoomStatus.text = patients.roomStatus
-        txtAge.text = patients.birthDate.toAge()
+    func setupCell(patient: Patient) {
+        txtNrm.text = patient.nrm
+        txtName.text = patient.name
+        imgGender.image = patient.gender ? #imageLiteral(resourceName: "sex-male") : #imageLiteral(resourceName: "sex-female")
+        txtBirthDate.text = patient.birthDate.toString()
+        txtRoomStatus.text = patient.roomStatus
+        txtAge.text = patient.birthDate.toAge()
     }
 }

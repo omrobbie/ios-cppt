@@ -8,7 +8,7 @@
 
 import Firebase
 
-let REF_PATIENTS = "patients"
+let REF_PATIENT = "patient"
 
 let NRM = "nrm"
 let NAME = "name"
@@ -16,11 +16,11 @@ let GENDER = "gender"
 let BIRTH_DATE = "birthDate"
 let ROOM_STATUS = "roomStatus"
 
-var refPatients: CollectionReference = Firestore.firestore().collection(REF_PATIENTS)
-var listenPatients: ListenerRegistration!
+var refPatients: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
+var listenPatients: ListenerRegistration?
 
-func removeListener(listener: ListenerRegistration) {
-    if listener != nil {
+func removeListener(listener: ListenerRegistration?) {
+    if let listener = listener {
         listener.remove()
     }
 }
