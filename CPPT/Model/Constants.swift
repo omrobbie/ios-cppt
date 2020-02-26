@@ -8,6 +8,7 @@
 
 import Firebase
 
+let REF_USER = "user"
 let REF_PATIENT = "patient"
 let REF_HISTORY = "history"
 
@@ -16,6 +17,7 @@ let NAME = "name"
 let GENDER = "gender"
 let BIRTH_DATE = "birthDate"
 let ROOM_STATUS = "roomStatus"
+let TYPE = "type"
 
 let SUBJECTIVE = "subjective"
 let OBJECTIVE = "objective"
@@ -27,6 +29,7 @@ let USER_NAME = "userName"
 let USER_TYPE = "userType"
 let TIMESTAMP = "timestamp"
 
+var refUser: CollectionReference = Firestore.firestore().collection(REF_USER)
 var refPatient: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
 var refHistory: CollectionReference = refPatient
 

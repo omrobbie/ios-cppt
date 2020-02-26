@@ -33,3 +33,9 @@ func isUserNotSignIn(completion: @escaping () -> ()) {
         completion()
     }
 }
+
+func isUserSignIn(completion: @escaping (_ uid: String) -> ()) {
+    if let currentUser = Auth.auth().currentUser {
+        completion(currentUser.uid)
+    }
+}

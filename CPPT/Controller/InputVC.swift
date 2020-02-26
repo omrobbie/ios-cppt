@@ -33,6 +33,9 @@ class InputVC: UIViewController {
 
     var patient: Patient?
 
+    var name: String?
+    var type: String?
+
     private var constraintBottomDefault: CGFloat = 0.0
 
     override func viewDidLoad() {
@@ -40,6 +43,20 @@ class InputVC: UIViewController {
         setupUI()
 
         constraintBottomDefault = constraintBottom.constant
+
+        isUserSignIn { (uid) in
+            let document = refUser.document(uid)
+
+            document.getDocument { (snapshot, error) in
+                guard let snapshot = snapshot else {return}
+                let data = snapshot.data()
+
+                if let data = data {
+                    self.name = data[NAME] as? String ?? ""
+                    self.type = data[TYPE] as? String ?? ""
+                }
+            }
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -96,8 +113,8 @@ class InputVC: UIViewController {
         let plan = !txtPlan.isEmpty ? txtPlan.text ?? "" : ""
         let instruction = !txtInstruction.isEmpty ? txtInstruction.text ?? "" : ""
         let review = !txtReview.isEmpty ? txtReview.text ?? "" : ""
-        let userName = "user name"
-        let userType = "user type"
+        let userName = name ?? ""
+        let userType = type ?? ""
 
         Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
             let newDocument = refHistory.document()
