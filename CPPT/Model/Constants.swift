@@ -30,11 +30,10 @@ let TIMESTAMP = "timestamp"
 var refPatient: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
 var refHistory: CollectionReference?
 
-var listenPatient: ListenerRegistration?
-var listenHistory: ListenerRegistration?
+var listenerRegister: ListenerRegistration?
 
-func removeListener(listener: ListenerRegistration?) {
-    if let listener = listener {
+func listernerRemove() {
+    if let listener = listenerRegister {
         listener.remove()
     }
 }

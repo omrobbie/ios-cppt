@@ -22,7 +22,7 @@ class HomeVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        listenPatient = refPatient.order(by: NAME).addSnapshotListener({ (snapshot, error) in
+        listenerRegister = refPatient.order(by: NAME).addSnapshotListener({ (snapshot, error) in
             if let error = error {
                 alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
                 return
@@ -35,7 +35,7 @@ class HomeVC: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        removeListener(listener: listenPatient)
+        listernerRemove()
     }
 
     func foundQRCode(code: String) {

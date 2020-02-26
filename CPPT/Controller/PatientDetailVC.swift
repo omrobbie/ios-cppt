@@ -37,7 +37,7 @@ class PatientDetailVC: UIViewController {
         refHistory = refPatient.document(patient.documentId).collection(REF_HISTORY)
         guard let refHistory = refHistory else {return}
 
-        listenHistory = refHistory.order(by: TIMESTAMP, descending: true).addSnapshotListener({ (snapshot, error) in
+        listenerRegister = refHistory.order(by: TIMESTAMP, descending: true).addSnapshotListener({ (snapshot, error) in
             if let error = error {
                 alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
                 return
@@ -50,7 +50,7 @@ class PatientDetailVC: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        removeListener(listener: listenHistory)
+        listernerRemove()
     }
 
     func setupUI() {
