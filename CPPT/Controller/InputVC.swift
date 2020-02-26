@@ -32,6 +32,7 @@ class InputVC: UIViewController {
     @IBOutlet weak var txtReview: CustomUITextView!
 
     var patient: Patient?
+    var history: History?
 
     var name: String?
     var type: String?
@@ -89,6 +90,15 @@ class InputVC: UIViewController {
         txtBirthDate.text = patient.birthDate.toString()
         txtRoomStatus.text = patient.roomStatus
         txtAge.text = patient.birthDate.toAge()
+
+        if let history = history {
+            txtSubjective.text = history.subjective
+            txtObjective.text = history.objective
+            txtAssessment.text = history.assessment
+            txtPlan.text = history.plan
+            txtInstruction.text = history.instruction
+            txtReview.text = history.review
+        }
     }
 
     @IBAction func btnSignatureStartTapped(_ sender: Any) {
@@ -117,6 +127,24 @@ class InputVC: UIViewController {
         let userType = type ?? ""
 
         Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
+            if let history = self.history {
+                let oldDocument = refHistory.document(history.documentId)
+
+                transaction.updateData([
+                    SUBJECTIVE: subjective,
+                    OBJECTIVE: objective,
+                    ASSESSMENT: assessment,
+                    PLAN: plan,
+                    INSTRUCTION: instruction,
+                    REVIEW: review,
+                    USER_NAME: userName,
+                    USER_TYPE: userType,
+                    TIMESTAMP: FieldValue.serverTimestamp()
+                ], forDocument: oldDocument)
+
+                return nil
+            }
+
             let newDocument = refHistory.document()
 
             transaction.setData([

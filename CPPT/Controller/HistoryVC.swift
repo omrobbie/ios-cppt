@@ -54,4 +54,11 @@ class HistoryVC: UIViewController {
         txtInstruction.text = history.instruction
         txtReview.text = history.review
     }
+
+    @IBAction func btnEditTapped(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "InputVC") as? InputVC else {return}
+        vc.patient = patient
+        vc.history = history
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

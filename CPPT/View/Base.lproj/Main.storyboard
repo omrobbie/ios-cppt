@@ -1136,7 +1136,11 @@
                         <viewLayoutGuide key="safeArea" id="da6-gE-LLk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Riwayat Asuhan" id="59r-f0-OdN">
-                        <barButtonItem key="rightBarButtonItem" title="Ubah" image="square.and.pencil" catalog="system" id="FBa-Gv-AA3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Ubah" image="square.and.pencil" catalog="system" id="FBa-Gv-AA3">
+                            <connections>
+                                <action selector="btnEditTapped:" destination="q1V-fQ-JA0" id="uhv-uF-wTN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
