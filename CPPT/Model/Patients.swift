@@ -18,12 +18,33 @@ class Patients {
     private(set) var birthDate: Date!
     private(set) var roomStatus: String!
 
-    init(documentId: String, nrm: String, name: String, gender: Bool, birthDate: Date, roomStatus: String) {
+    init(documentId: String, nrm: String, name: String, gender: Bool, birthTimeStamp: Timestamp, roomStatus: String) {
         self.documentId = documentId
         self.nrm = nrm
         self.name = name
         self.gender = gender
-        self.birthDate = birthDate
+        self.birthDate = birthTimeStamp.dateValue()
         self.roomStatus = roomStatus
+    }
+
+    class func parseData(snapshot: QuerySnapshot?) -> [Patients] {
+        var patients = [Patients]()
+        guard let snapshot = snapshot else {return patients}
+
+        for document in snapshot.documents {
+            let data = document.data()
+            let documentId = document.documentID
+
+            let nrm = data[NRM] as? String ?? ""
+            let name = data[NAME] as? String ?? ""
+            let gender = data[GENDER] as? Bool ?? true
+            let birthDateTimestamp = data[BIRTH_DATE] as? Timestamp ?? Timestamp()
+            let roomStatus = data[ROOM_STATUS] as? String ?? ""
+
+            let newElement = Patients(documentId: documentId, nrm: nrm, name: name, gender: gender, birthTimeStamp: birthDateTimestamp, roomStatus: roomStatus)
+            patients.append(newElement)
+        }
+
+        return patients
     }
 }

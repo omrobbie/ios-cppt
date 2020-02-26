@@ -198,6 +198,14 @@
                                                 <constraint firstItem="n8O-Bg-oji" firstAttribute="centerY" secondItem="ISO-3w-Bb5" secondAttribute="centerY" id="sHW-gZ-0TQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgGender" destination="K5W-oi-zbD" id="sPB-Dv-QmY"/>
+                                            <outlet property="txtAge" destination="pCY-Z7-m1O" id="rFB-i3-Ncw"/>
+                                            <outlet property="txtBirthDate" destination="sIU-B9-qTV" id="Rei-MH-Gz5"/>
+                                            <outlet property="txtName" destination="kDZ-Mx-KEu" id="B2o-UU-Jyk"/>
+                                            <outlet property="txtNrm" destination="BQh-d4-3c3" id="4gg-xf-OiV"/>
+                                            <outlet property="txtRoomStatus" destination="n8O-Bg-oji" id="ueZ-TM-dDj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

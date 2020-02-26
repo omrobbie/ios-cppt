@@ -28,11 +28,8 @@ class HomeVC: UIViewController {
                 return
             }
 
-            guard let snapshot = snapshot else {return}
-
-            for document in snapshot.documents {
-                print(document.data())
-            }
+            self.patients = Patients.parseData(snapshot: snapshot)
+            self.tableView.reloadData()
         })
     }
 
@@ -72,12 +69,12 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return patients.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PatientCell") as? PatientCell else {return UITableViewCell()}
-
+        cell.setupCell(patients: patients[indexPath.row])
         return cell
     }
 
