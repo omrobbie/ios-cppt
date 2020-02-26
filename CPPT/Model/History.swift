@@ -20,8 +20,9 @@ class History {
     private(set) var review: String!
     private(set) var userName: String!
     private(set) var userType: String!
+    private(set) var timestamp: Date!
 
-    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userName: String, userType: String) {
+    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userName: String, userType: String, timestampServer: Timestamp) {
         self.documentId = documentId
         self.subjective = subjective
         self.objective = objective
@@ -31,6 +32,7 @@ class History {
         self.review = review
         self.userName = userName
         self.userType = userType
+        self.timestamp = timestampServer.dateValue()
     }
 
     class func parseData(snapshot: QuerySnapshot?) -> [History] {
@@ -49,8 +51,9 @@ class History {
             let review = data[REVIEW] as? String ?? ""
             let userName = data[USER_NAME] as? String ?? ""
             let userType = data[USER_TYPE] as? String ?? ""
+            let timestampServer = data[TIMESTAMP] as? Timestamp ?? Timestamp()
 
-            let newElement = History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType)
+            let newElement = History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer)
             
             histories.append(newElement)
         }

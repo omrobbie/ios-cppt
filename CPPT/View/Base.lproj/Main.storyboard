@@ -938,97 +938,109 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terakhir diperbaharui:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmo-NU-m6D">
-                                                <rect key="frame" x="8" y="8" width="172" height="24"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <rect key="frame" x="8" y="8" width="142" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Feb 2020 16:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKN-Ww-coP">
-                                                <rect key="frame" x="188" y="8" width="146" height="24"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                <rect key="frame" x="154" y="8" width="120.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oleh:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dka-16-Mhq">
+                                                <rect key="frame" x="8" y="29.5" width="36" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="omrobbie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxE-EX-1Eb">
+                                                <rect key="frame" x="48" y="29.5" width="64" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subyektif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-5M-buf">
-                                                <rect key="frame" x="8" y="56" width="87.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="73" width="87.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nyeri akut lutut kiri sejak 1-2 jam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-hm-hwG">
-                                                <rect key="frame" x="8" y="85.5" width="398" height="23.5"/>
+                                                <rect key="frame" x="8" y="102.5" width="398" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obyektif" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjE-DJ-661">
-                                                <rect key="frame" x="8" y="133" width="81" height="27.5"/>
+                                                <rect key="frame" x="8" y="150" width="81" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skala nyeri VAS: 7, TD 165/90, N 115/m, Frek Nafas: 30/m" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9L-0G-cMz">
-                                                <rect key="frame" x="8" y="162.5" width="398" height="46.5"/>
+                                                <rect key="frame" x="8" y="179.5" width="398" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analisis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng4-UY-6gH">
-                                                <rect key="frame" x="8" y="233" width="71" height="27.5"/>
+                                                <rect key="frame" x="8" y="250" width="71" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nyeri akut arthritis gout" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS6-ah-J14">
-                                                <rect key="frame" x="8" y="262.5" width="398" height="23.5"/>
+                                                <rect key="frame" x="8" y="279.5" width="398" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perencanaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TS-oC-40r">
-                                                <rect key="frame" x="8" y="310" width="118.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="327" width="118.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mengatasi nyeri dalam 2 jam dengan target VAS &lt; 4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR9-MD-pWU">
-                                                <rect key="frame" x="8" y="339.5" width="398" height="46.5"/>
+                                                <rect key="frame" x="8" y="356.5" width="398" height="46.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruksi PPA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtN-rg-Why">
-                                                <rect key="frame" x="8" y="410" width="119.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="427" width="119.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1F-hY-aBP">
-                                                <rect key="frame" x="8" y="439.5" width="398" height="23.5"/>
+                                                <rect key="frame" x="8" y="456.5" width="398" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ulasan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q53-4g-WJX">
-                                                <rect key="frame" x="8" y="487" width="62.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="504" width="62.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayw-Nu-EEK">
-                                                <rect key="frame" x="8" y="516.5" width="398" height="23.5"/>
+                                                <rect key="frame" x="8" y="533.5" width="398" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanda Tangan Digital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpU-WY-ff7">
-                                                <rect key="frame" x="8" y="564" width="194.5" height="27.5"/>
+                                                <rect key="frame" x="8" y="581" width="194.5" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signature" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n8W-Nd-8ob">
-                                                <rect key="frame" x="8" y="595.5" width="398" height="128.5"/>
+                                                <rect key="frame" x="8" y="612.5" width="398" height="128.5"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="idD-Su-RWI"/>
@@ -1038,6 +1050,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="u9L-0G-cMz" secondAttribute="trailing" constant="8" id="0bU-ko-UXG"/>
+                                            <constraint firstItem="dka-16-Mhq" firstAttribute="top" secondItem="Nmo-NU-m6D" secondAttribute="bottom" constant="2" id="0dv-Z2-tBG"/>
                                             <constraint firstAttribute="trailing" secondItem="4VJ-hm-hwG" secondAttribute="trailing" constant="8" id="4Fe-2P-7r5"/>
                                             <constraint firstItem="Ayw-Nu-EEK" firstAttribute="top" secondItem="q53-4g-WJX" secondAttribute="bottom" constant="2" id="560-qY-Bjj"/>
                                             <constraint firstItem="wtN-rg-Why" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="9PM-z5-sSa"/>
@@ -1048,8 +1061,12 @@
                                             <constraint firstItem="n8W-Nd-8ob" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="Cbi-e1-FKA"/>
                                             <constraint firstItem="9TS-oC-40r" firstAttribute="top" secondItem="hS6-ah-J14" secondAttribute="bottom" constant="24" id="Cis-HX-mgb"/>
                                             <constraint firstItem="k3C-5M-buf" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="EIU-Wq-DQ2"/>
+                                            <constraint firstItem="dka-16-Mhq" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="Fh5-l8-Ox5"/>
+                                            <constraint firstItem="qxE-EX-1Eb" firstAttribute="leading" secondItem="dka-16-Mhq" secondAttribute="trailing" constant="4" id="FnU-Dw-z4x"/>
+                                            <constraint firstAttribute="bottom" secondItem="n8W-Nd-8ob" secondAttribute="bottom" constant="39.5" id="Gpr-n7-VrN"/>
                                             <constraint firstItem="b1F-hY-aBP" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="N9L-eC-ba6"/>
                                             <constraint firstItem="IpU-WY-ff7" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="NXO-6y-4l9"/>
+                                            <constraint firstItem="k3C-5M-buf" firstAttribute="top" secondItem="dka-16-Mhq" secondAttribute="bottom" constant="24" id="Nc8-Ds-ac6"/>
                                             <constraint firstAttribute="trailing" secondItem="b1F-hY-aBP" secondAttribute="trailing" constant="8" id="PGO-Tj-dqh"/>
                                             <constraint firstItem="4VJ-hm-hwG" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="S86-lV-ci4"/>
                                             <constraint firstItem="Ng4-UY-6gH" firstAttribute="top" secondItem="u9L-0G-cMz" secondAttribute="bottom" constant="24" id="Uqg-Zi-SPU"/>
@@ -1063,9 +1080,8 @@
                                             <constraint firstItem="n8W-Nd-8ob" firstAttribute="top" secondItem="IpU-WY-ff7" secondAttribute="bottom" constant="2" id="hoH-bY-n8w"/>
                                             <constraint firstItem="Ng4-UY-6gH" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="i5D-Oh-XH3"/>
                                             <constraint firstItem="9TS-oC-40r" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="k8D-0R-Ngu"/>
-                                            <constraint firstItem="k3C-5M-buf" firstAttribute="top" secondItem="Nmo-NU-m6D" secondAttribute="bottom" constant="24" id="md3-6W-der"/>
                                             <constraint firstItem="SjE-DJ-661" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="n0z-Gd-tpY"/>
-                                            <constraint firstItem="kKN-Ww-coP" firstAttribute="leading" secondItem="Nmo-NU-m6D" secondAttribute="trailing" constant="8" id="nSJ-BE-J3N"/>
+                                            <constraint firstItem="kKN-Ww-coP" firstAttribute="leading" secondItem="Nmo-NU-m6D" secondAttribute="trailing" constant="4" id="nSJ-BE-J3N"/>
                                             <constraint firstItem="hS6-ah-J14" firstAttribute="top" secondItem="Ng4-UY-6gH" secondAttribute="bottom" constant="2" id="pL4-RK-qsZ"/>
                                             <constraint firstItem="AR9-MD-pWU" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="pRb-YO-TRD"/>
                                             <constraint firstAttribute="trailing" secondItem="Ayw-Nu-EEK" secondAttribute="trailing" constant="8" id="r8g-lT-DDs"/>
@@ -1073,10 +1089,10 @@
                                             <constraint firstItem="b1F-hY-aBP" firstAttribute="top" secondItem="wtN-rg-Why" secondAttribute="bottom" constant="2" id="uaS-hQ-n1h"/>
                                             <constraint firstItem="wtN-rg-Why" firstAttribute="top" secondItem="AR9-MD-pWU" secondAttribute="bottom" constant="24" id="vdM-o1-ssi"/>
                                             <constraint firstAttribute="trailing" secondItem="n8W-Nd-8ob" secondAttribute="trailing" constant="8" id="wT6-ak-tCo"/>
+                                            <constraint firstItem="qxE-EX-1Eb" firstAttribute="centerY" secondItem="dka-16-Mhq" secondAttribute="centerY" id="wfL-wf-MfH"/>
                                             <constraint firstItem="u9L-0G-cMz" firstAttribute="top" secondItem="SjE-DJ-661" secondAttribute="bottom" constant="2" id="wwI-7g-xRd"/>
                                             <constraint firstItem="Nmo-NU-m6D" firstAttribute="leading" secondItem="qhS-ab-oid" secondAttribute="leading" constant="8" id="xgp-tB-IaY"/>
                                             <constraint firstItem="SjE-DJ-661" firstAttribute="top" secondItem="4VJ-hm-hwG" secondAttribute="bottom" constant="24" id="z1T-CT-VZt"/>
-                                            <constraint firstAttribute="bottom" secondItem="n8W-Nd-8ob" secondAttribute="bottom" constant="56.5" id="zvS-P2-h5X"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1106,6 +1122,23 @@
                         <barButtonItem key="rightBarButtonItem" title="Ubah" image="square.and.pencil" catalog="system" id="FBa-Gv-AA3"/>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="imgGender" destination="IxF-FT-pOG" id="a5t-jh-xgb"/>
+                        <outlet property="imgSignature" destination="n8W-Nd-8ob" id="GGZ-Tt-Vbo"/>
+                        <outlet property="txtAge" destination="iKe-mo-isf" id="YI1-zX-62O"/>
+                        <outlet property="txtAssessment" destination="hS6-ah-J14" id="3wl-rH-4Wh"/>
+                        <outlet property="txtBirthDate" destination="hgZ-4V-Pnl" id="NwM-k7-yX8"/>
+                        <outlet property="txtInstruction" destination="b1F-hY-aBP" id="sNT-Ew-pTP"/>
+                        <outlet property="txtName" destination="faq-Ce-MBe" id="Mup-Lc-6uJ"/>
+                        <outlet property="txtNrm" destination="ZQe-EC-QDh" id="mY9-aj-nEX"/>
+                        <outlet property="txtObjective" destination="u9L-0G-cMz" id="pwa-fW-9RR"/>
+                        <outlet property="txtPlan" destination="AR9-MD-pWU" id="Az7-Do-OVo"/>
+                        <outlet property="txtReview" destination="Ayw-Nu-EEK" id="etU-5A-Lbm"/>
+                        <outlet property="txtRoomStatus" destination="3jX-sW-WxO" id="aIc-sE-AKR"/>
+                        <outlet property="txtSubjective" destination="4VJ-hm-hwG" id="TPH-nJ-ISY"/>
+                        <outlet property="txtTimestamp" destination="kKN-Ww-coP" id="77w-h6-Nfn"/>
+                        <outlet property="txtUserName" destination="qxE-EX-1Eb" id="kdH-iJ-3zl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQ2-q1-yEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

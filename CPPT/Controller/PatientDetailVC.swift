@@ -96,6 +96,8 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "HistoryVC") as? HistoryVC else {return}
+        vc.patient = patient
+        vc.history = histories[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
