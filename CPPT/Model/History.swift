@@ -18,9 +18,10 @@ class History {
     private(set) var plan: String!
     private(set) var instruction: String!
     private(set) var review: String!
-    private(set) var userId: String!
+    private(set) var userName: String!
+    private(set) var userType: String!
 
-    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userId: String) {
+    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userName: String, userType: String) {
         self.documentId = documentId
         self.subjective = subjective
         self.objective = objective
@@ -28,6 +29,32 @@ class History {
         self.plan = plan
         self.instruction = instruction
         self.review = review
-        self.userId = userId
+        self.userName = userName
+        self.userType = userType
+    }
+
+    class func parseData(snapshot: QuerySnapshot?) -> [History] {
+        var histories = [History]()
+        guard let snapshot = snapshot else {return histories}
+
+        for document in snapshot.documents {
+            let data = document.data()
+            let documentId = document.documentID
+
+            let subjective = data[SUBJECTIVE] as? String ?? ""
+            let objective = data[OBJECTIVE] as? String ?? ""
+            let assessment = data[ASSESSMENT] as? String ?? ""
+            let plan = data[PLAN] as? String ?? ""
+            let instruction = data[INSTRUCTION] as? String ?? ""
+            let review = data[REVIEW] as? String ?? ""
+            let userName = data[USER_NAME] as? String ?? ""
+            let userType = data[USER_TYPE] as? String ?? ""
+
+            let newElement = History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType)
+            
+            histories.append(newElement)
+        }
+
+        return histories
     }
 }

@@ -351,6 +351,14 @@
                                                 <constraint firstItem="4CN-Xf-nUr" firstAttribute="leading" secondItem="b3v-V0-ksk" secondAttribute="leadingMargin" id="zUX-g2-t4s"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="txtAssessment" destination="83M-c9-xNP" id="tXY-RD-yda"/>
+                                            <outlet property="txtObjective" destination="y7s-gg-sYR" id="IAW-S0-B2g"/>
+                                            <outlet property="txtPlan" destination="d9b-Y1-wcW" id="Ed3-2n-2h7"/>
+                                            <outlet property="txtSubjective" destination="4CN-Xf-nUr" id="Pcz-Bj-EKT"/>
+                                            <outlet property="txtUserName" destination="r67-X7-dKS" id="oro-0f-pxS"/>
+                                            <outlet property="txtUserType" destination="USW-Gm-pHL" id="Q9E-jL-Qby"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

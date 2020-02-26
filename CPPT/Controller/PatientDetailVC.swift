@@ -20,6 +20,8 @@ class PatientDetailVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var patient: Patient?
+
+    private var histories = [History]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,8 @@ class PatientDetailVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard let patient = patient else {return}
-        refHistory = refHistory.document(patient.documentId).collection(REF_HISTORY)
+        refHistory = refPatient.document(patient.documentId).collection(REF_HISTORY)
+        guard let refHistory = refHistory else {return}
 
         listenHistory = refHistory.order(by: TIMESTAMP, descending: true).addSnapshotListener({ (snapshot, error) in
             if let error = error {
@@ -40,11 +43,8 @@ class PatientDetailVC: UIViewController {
                 return
             }
 
-            guard let snapshot = snapshot else {return}
-
-            for document in snapshot.documents {
-                print(document.data())
-            }
+            self.histories = History.parseData(snapshot: snapshot)
+            self.tableView.reloadData()
         })
     }
 
@@ -72,14 +72,23 @@ class PatientDetailVC: UIViewController {
 
 extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return histories.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell") as? HistoryCell else {return UITableViewCell()}
+        let history = histories[indexPath.row]
+        cell.setupCell(history: history)
 
-        if indexPath.row == 1 {
-            cell.backgroundColor = .lightGray
+        switch history.userType {
+        case "Dokters":
+            cell.backgroundColor = #colorLiteral(red: 0.9039862752, green: 0.8986125588, blue: 0.9081169367, alpha: 1)
+        case "Perawat", "Bidan":
+            cell.backgroundColor = #colorLiteral(red: 0.7701118588, green: 0.8777749538, blue: 1, alpha: 1)
+        case "Gizi", "Farmasi", "Dokter":
+            cell.backgroundColor = #colorLiteral(red: 0.9146185517, green: 1, blue: 0.890776813, alpha: 1)
+        default:
+            cell.backgroundColor = .none
         }
 
         return cell

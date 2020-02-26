@@ -23,11 +23,12 @@ let ASSESSMENT = "assessment"
 let PLAN = "plan"
 let INSTRUCTION = "instruction"
 let REVIEW = "review"
-let USER_ID = "userId"
+let USER_NAME = "userName"
+let USER_TYPE = "userType"
 let TIMESTAMP = "timestamp"
 
 var refPatient: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
-var refHistory: CollectionReference = refPatient
+var refHistory: CollectionReference?
 
 var listenPatient: ListenerRegistration?
 var listenHistory: ListenerRegistration?
