@@ -15,6 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="8JJ-Sg-kgT">
+                                <rect key="frame" x="54" y="0.0" width="360" height="440"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKS-Rw-Jqg" customClass="CustomUIButton" customModule="CPPT" customModuleProvider="target">
                                 <rect key="frame" x="274" y="812" width="120" height="50"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -65,15 +69,26 @@
                                     <constraint firstItem="ppQ-7G-HYa" firstAttribute="leading" secondItem="aZo-Ee-cJc" secondAttribute="leading" id="zt3-gB-Pf2"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="medical-file" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-HF-fX3">
+                                <rect key="frame" x="0.0" y="573" width="220" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="60E-hI-4et"/>
+                                    <constraint firstAttribute="width" constant="220" id="Nfx-hP-V37"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZo-Ee-cJc" secondAttribute="trailing" constant="20" id="5D6-95-FIq"/>
                             <constraint firstItem="aZo-Ee-cJc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6nc-eK-FVl"/>
+                            <constraint firstItem="Y0g-HF-fX3" firstAttribute="top" secondItem="aZo-Ee-cJc" secondAttribute="bottom" id="JEG-1e-caM"/>
                             <constraint firstItem="jKS-Rw-Jqg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Q8h-K6-Ni2"/>
+                            <constraint firstItem="8JJ-Sg-kgT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="SoP-Eg-Yjq"/>
                             <constraint firstItem="jKS-Rw-Jqg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Tty-QL-9YY"/>
                             <constraint firstItem="aZo-Ee-cJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="itL-Qd-ysc"/>
                             <constraint firstItem="aZo-Ee-cJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jbB-AR-qJp"/>
+                            <constraint firstItem="Y0g-HF-fX3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kFy-Dh-WJL"/>
+                            <constraint firstItem="8JJ-Sg-kgT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qab-Wh-jcb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -1172,6 +1187,8 @@
         <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="login" width="512" height="512"/>
+        <image name="medical-file" width="512" height="512"/>
+        <image name="onboarding" width="360" height="440"/>
         <image name="pin.fill" catalog="system" width="58" height="64"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="scribble" catalog="system" width="64" height="54"/>
