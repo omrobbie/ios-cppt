@@ -79,7 +79,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") else {return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "PatientDetailVC") as? PatientDetailVC else {return}
+        vc.patient = patients[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }

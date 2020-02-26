@@ -458,7 +458,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgGender" destination="EvJ-dX-02l" id="act-kP-R2A"/>
                         <outlet property="tableView" destination="RRu-33-Its" id="dPz-o4-NKk"/>
+                        <outlet property="txtAge" destination="9Fx-TR-pRF" id="y3d-pN-Roc"/>
+                        <outlet property="txtBirthDate" destination="us4-AW-y6Z" id="05X-zd-xbw"/>
+                        <outlet property="txtName" destination="xrD-5H-rB4" id="yko-YW-Ks1"/>
+                        <outlet property="txtNrm" destination="I0l-cL-D3W" id="ckx-cf-aO5"/>
+                        <outlet property="txtRoomStatus" destination="hXe-4n-qFg" id="ywq-zx-RID"/>
                         <segue destination="q1V-fQ-JA0" kind="push" id="a4O-b5-kEr"/>
                         <segue destination="ZOn-Os-SaO" kind="push" id="ZQ8-zC-2nM"/>
                     </connections>

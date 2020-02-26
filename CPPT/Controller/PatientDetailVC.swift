@@ -10,12 +10,34 @@ import UIKit
 
 class PatientDetailVC: UIViewController {
 
+    @IBOutlet weak var txtNrm: UILabel!
+    @IBOutlet weak var txtName: UILabel!
+    @IBOutlet weak var imgGender: UIImageView!
+    @IBOutlet weak var txtBirthDate: UILabel!
+    @IBOutlet weak var txtRoomStatus: UILabel!
+    @IBOutlet weak var txtAge: UILabel!
+
     @IBOutlet weak var tableView: UITableView!
+
+    var patient: Patient?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    func setupUI() {
+        guard let patient = patient else {return}
+
+        txtNrm.text = patient.nrm
+        txtName.text = patient.name
+        imgGender.image = patient.gender ? #imageLiteral(resourceName: "sex-male") : #imageLiteral(resourceName: "sex-female")
+        txtBirthDate.text = patient.birthDate.toString()
+        txtRoomStatus.text = patient.roomStatus
+        txtAge.text = patient.birthDate.toAge()
     }
 
     @IBAction func btnAddTapped(_ sender: Any) {
