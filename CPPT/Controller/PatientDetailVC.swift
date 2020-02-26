@@ -100,4 +100,21 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
         vc.history = histories[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let documentId = histories[indexPath.row].documentId {
+                refHistory.document(documentId).delete { (error) in
+                    if let error = error {
+                        alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                        return
+                    }
+                }
+            }
+        }
+    }
 }
