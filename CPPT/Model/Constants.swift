@@ -28,10 +28,12 @@ let REVIEW = "review"
 let USER_NAME = "userName"
 let USER_TYPE = "userType"
 let TIMESTAMP = "timestamp"
+let SIGNATURE = "signature"
 
 var refUser: CollectionReference = Firestore.firestore().collection(REF_USER)
 var refPatient: CollectionReference = Firestore.firestore().collection(REF_PATIENT)
 var refHistory: CollectionReference = refPatient
+var refStorage: StorageReference = Storage.storage().reference()
 
 var listenerRegister: ListenerRegistration?
 

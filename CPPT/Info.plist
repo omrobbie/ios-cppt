@@ -60,5 +60,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Akses kamera diperlukan untuk melakukan pemindaian.</string>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
 </dict>
 </plist>

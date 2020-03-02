@@ -126,9 +126,11 @@ class InputVC: UIViewController {
         let userName = name ?? ""
         let userType = type ?? ""
 
+        var document: DocumentReference?
+
         Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
             if let history = self.history {
-                let oldDocument = refHistory.document(history.documentId)
+                document = refHistory.document(history.documentId)
 
                 transaction.updateData([
                     SUBJECTIVE: subjective,
@@ -140,12 +142,12 @@ class InputVC: UIViewController {
                     USER_NAME: userName,
                     USER_TYPE: userType,
                     TIMESTAMP: FieldValue.serverTimestamp()
-                ], forDocument: oldDocument)
+                ], forDocument: document!)
 
                 return nil
             }
 
-            let newDocument = refHistory.document()
+            document = refHistory.document()
 
             transaction.setData([
                 SUBJECTIVE: subjective,
@@ -157,7 +159,7 @@ class InputVC: UIViewController {
                 USER_NAME: userName,
                 USER_TYPE: userType,
                 TIMESTAMP: FieldValue.serverTimestamp()
-            ], forDocument: newDocument)
+            ], forDocument: document!)
 
             return nil
         }) { (object, error) in
@@ -166,7 +168,46 @@ class InputVC: UIViewController {
                 return
             }
 
-            self.navigationController?.popViewController(animated: true)
+            if let signaturePad = self.signaturePad,
+                let image = signaturePad.getSignature(),
+                let imageData = image.pngData(),
+                let document = document {
+
+                let metadata = StorageMetadata()
+                metadata.contentType = "images/png"
+
+                let refImage = refStorage.child("\(document.documentID).png")
+                refImage.putData(imageData, metadata: metadata) { (data, error) in
+                    if let error = error {
+                        alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                        return
+                    }
+
+                    refImage.downloadURL { (url, error) in
+                        if let error = error {
+                            alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                            return
+                        }
+
+                        guard let url = url else {return}
+
+                        Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
+                            transaction.updateData([
+                                "signatureUrl": url.absoluteString
+                            ], forDocument: document)
+                        }) { (object, error) in
+                            if let error = error {
+                                alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                                return
+                            }
+
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                }
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
 }
