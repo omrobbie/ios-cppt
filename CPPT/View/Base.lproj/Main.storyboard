@@ -353,6 +353,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imgSignature" destination="y6o-9m-aUS" id="EP4-oi-o9J"/>
                                             <outlet property="txtAssessment" destination="83M-c9-xNP" id="tXY-RD-yda"/>
                                             <outlet property="txtObjective" destination="y7s-gg-sYR" id="IAW-S0-B2g"/>
                                             <outlet property="txtPlan" destination="d9b-Y1-wcW" id="Ed3-2n-2h7"/>

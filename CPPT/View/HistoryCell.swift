@@ -15,6 +15,7 @@ class HistoryCell: UITableViewCell {
     @IBOutlet weak var txtPlan: UILabel!
     @IBOutlet weak var txtUserType: UILabel!
     @IBOutlet weak var txtUserName: UILabel!
+    @IBOutlet weak var imgSignature: UIImageView!
 
     func setupCell(history: History) {
         txtSubjective.text = "S: \(history.subjective ?? "-")"
@@ -23,5 +24,10 @@ class HistoryCell: UITableViewCell {
         txtPlan.text = "P: \(history.plan ?? "-")"
         txtUserName.text = history.userName
         txtUserType.text = history.userType
+
+        if let signature = history.signatureUrl {
+            imgSignature.load(url: signature)
+            imgSignature.backgroundColor = .clear
+        }
     }
 }

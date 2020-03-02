@@ -21,8 +21,9 @@ class History {
     private(set) var userName: String!
     private(set) var userType: String!
     private(set) var timestamp: Date!
+    private(set) var signatureUrl: String!
 
-    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userName: String, userType: String, timestampServer: Timestamp) {
+    init(documentId: String, subjective: String, objective: String, assessment: String, plan: String, instruction: String, review: String, userName: String, userType: String, timestampServer: Timestamp, signatureUrl: String) {
         self.documentId = documentId
         self.subjective = subjective
         self.objective = objective
@@ -33,6 +34,7 @@ class History {
         self.userName = userName
         self.userType = userType
         self.timestamp = timestampServer.dateValue()
+        self.signatureUrl = signatureUrl
     }
 
     class func parseData(snapshot: QuerySnapshot?) -> [History] {
@@ -52,8 +54,9 @@ class History {
             let userName = data[USER_NAME] as? String ?? ""
             let userType = data[USER_TYPE] as? String ?? ""
             let timestampServer = data[TIMESTAMP] as? Timestamp ?? Timestamp()
+            let signatureUrl = data[SIGNATURE_URL] as? String ?? ""
 
-            let newElement = History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer)
+            let newElement = History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer, signatureUrl: signatureUrl)
             
             histories.append(newElement)
         }
@@ -76,8 +79,9 @@ class History {
             let userName = data[USER_NAME] as? String ?? ""
             let userType = data[USER_TYPE] as? String ?? ""
             let timestampServer = data[TIMESTAMP] as? Timestamp ?? Timestamp()
+            let signatureUrl = data[SIGNATURE_URL] as? String ?? ""
 
-            return History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer)
+            return History.init(documentId: documentId, subjective: subjective, objective: objective, assessment: assessment, plan: plan, instruction: instruction, review: review, userName: userName, userType: userType, timestampServer: timestampServer, signatureUrl: signatureUrl)
         }
 
         return nil

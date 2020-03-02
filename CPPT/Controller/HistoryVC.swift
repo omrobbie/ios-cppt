@@ -56,6 +56,7 @@ class HistoryVC: UIViewController {
                 self.txtAssessment.text = dataHistory.assessment
                 self.txtInstruction.text = dataHistory.instruction
                 self.txtReview.text = dataHistory.review
+                self.imgSignature.load(url: dataHistory.signatureUrl)
             }
         })
     }

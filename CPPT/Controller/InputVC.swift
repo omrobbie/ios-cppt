@@ -193,7 +193,7 @@ class InputVC: UIViewController {
 
                         Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
                             transaction.updateData([
-                                "signatureUrl": url.absoluteString
+                                SIGNATURE_URL: url.absoluteString
                             ], forDocument: document)
                         }) { (object, error) in
                             if let error = error {
