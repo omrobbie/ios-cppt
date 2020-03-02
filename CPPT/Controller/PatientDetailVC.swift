@@ -113,6 +113,13 @@ extension PatientDetailVC: UITableViewDelegate, UITableViewDataSource {
                         alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
                         return
                     }
+
+                    refStorage.child("\(documentId).png").delete { (error) in
+                        if let error = error {
+                            alertMessage(sender: self, type: .error, message: error.localizedDescription, completion: nil)
+                            return
+                        }
+                    }
                 }
             }
         }
